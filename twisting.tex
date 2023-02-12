@@ -1,0 +1,311 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{paper-en}
+\usepackage{hyperref}
+
+
+
+
+%\usepackage[notref,notcite,color]{showkeys}
+
+
+\def\thetitle{Twistings}
+\def\theauthors{}
+
+\hypersetup{colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={\thetitle},
+pdfauthor={\theauthors}
+}
+
+
+
+
+
+
+
+
+
+
+%\overfullrule=100mm
+
+\begin{document}
+
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+
+
+\title{\thetitle}
+\author{}
+\date{}
+\maketitle
+
+%\begin{abstract}
+%\end{abstract}
+
+\section{The formula}
+
+
+
+Let $L$ be a smooth $n$-dimensional submanifold in a Riemannian manifold $M$.
+Choose a point $p\in L$;
+denote by $\T_pL$ and $\N_pL$ the tangent and normal spaces of $L$ at $p$.
+
+Recall that \emph{second fundamental form} $\II$ at $p$ is a symmetric quadratic form on $\T_pL$ with values in $\N_pL$.
+It is uniquely defined by the following identity
+\[\II(\vec v,\vec v)\df \gamma''_{\vec v}(0),\]
+where $\vec v\in \T_pL$ and $\gamma_{\vec v}$ an $L$-geodesic that starts at $p$ with initial velocity vector~$\vec v$.
+
+Suppose $\II$ is the second fundamental form at $p$.
+Denote by $H(p)$, $\zh(p)$, and $\Sc(p)$ the mean curvature vector, average value of $|\II(\vec u,\vec u)|^2$, and the scalar curvature of $L$ at $p$ respectively. 
+
+Let us denote by $\widetilde{\Sc}$ the \emph{outer scalar curvature} of $L$ in $M$;
+that is, if $e_1,\dots,e_n$ is an orthonormal basis of $\T_pL$, then 
+\[\widetilde\Sc(p)=2\cdot \sum_{i<j} K_{ij},\]
+where $K_{ij}$ denotes sectional curvature of $M$ in the direction spanned by $e_i$ and~$e_j$.
+
+
+The following claim gives a better version of \cite[5.B]{gromov1}.
+
+\begin{thm}{Formula}
+The following identity
+\[\Sc-\widetilde{\Sc}=\tfrac32\cdot |H|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh\]
+holds for any smooth $n$-dimensional submanifold $L$ in a Riemannian manifold.
+\end{thm}
+
+
+\parit{Proof.}
+Assume $\codim L=1$.
+Choose $p\in L$;
+denote by $k_1,\dots,k_n$ the principal curvatures of $L$ at $p$.
+Evidently, 
+\[|H|^2= \sum_ik_i^2+2\cdot\sum_{i<j}k_i\cdot k_j.\]
+
+Further, 
+\[
+n\cdot (n+2)\cdot\zh
+=
+3\cdot \sum_i k_i^2+2\cdot \sum_{i<j} k_i\cdot k_j.
+\]
+The last identity follows since $\zh$ is the average value of $\left(\sum_i k_i\cdot x_i^2\right)^2$ on $\SSS^{n-1}$.
+One has take into account that $3$ and $1$
+are the average values of  $n\cdot (n+2)\cdot x_i^4$ and $n\cdot (n+2)\cdot x_i^2\cdot x_j^2$ for $i\ne j$ on the unit sphere $\SSS^{n-1}\subset \RR^n$.
+Here we assume that $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
+
+
+By Gauss formula,
+\[\Sc-\widetilde\Sc=2\cdot\sum_{i<j}k_i\cdot k_j.\]
+It remains to rewrite this formula using the expressions for $|H|^2$ and $\zh$.
+
+If $\codim L =k>1$, then the second fundamental from can be presented as direct sum of $k$ real-valued quadratic forms $\II_1\oplus\dots\oplus \II_k$;
+that is,
+\[\II=e_1\cdot\II_1+\dots+e_k\cdot \II_k,\]
+where $e_1,\dots, e_k$ is an orthonormal basis of $\N_pL$.
+Denote by $\Sc_i-\widetilde{\Sc}_i$, $H_i$, and $\zh_i$ the values associated with $\II_i$.
+From above, we get
+\[\Sc_i-\widetilde{\Sc}_i=\tfrac32\cdot |H_i|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh_i\]
+for each $i$.
+
+Note that 
+\begin{align*}
+\Sc-\widetilde{\Sc}&=(\Sc_1-\widetilde{\Sc}_1)+\dots+(\Sc_k-\widetilde{\Sc}_k),
+\\
+|H^2|&=|H_1|^2+\dots+|H_k|^2,
+\\
+\zh&=\zh_1+\dots+\zh_k.
+\end{align*}
+Whence the general case follows.
+\qeds
+
+\section{Embeddings into sphere}
+
+The obtained formula shows that some results in \cite{gromov1,gromov2,gromov3} are exact.
+In this and the following section we will list of some of them.
+
+Let us denote by $\TT^n$ the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
+
+\begin{thm}{Theorem}
+Suppose $\iota\:\TT^n\looparrowright \SSS^q$ be a smooth immersion.
+Then 
+\[\zh(p)\ge \tfrac{2\cdot n}{n+2}\]
+at some point $p\in \TT^n$.
+
+In particular, there is a tangent direction of $\TT^n$ with normal curvature at least 
+\[\kappa_n=\sqrt{\tfrac{2\cdot n }{n+2}}.\]
+\end{thm}
+
+It was shown \cite{gromov1} that there is an isometric embedding of the torus $\TT^n$ with a flat metric that has normal curvature $\kappa_n$ in any direction at any point. 
+In particular, the above bound on normal curvature is optimal.
+Applying the compression lemma in \cite{gromov3}, we also get the following: \textit{any closed smooth manifold is diffeomorphic to a submanifold with normal curvatures at most $\sqrt{2}$ in the unit sphere of sufficiently large dimension.}
+\textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$.}
+Applying the theorem, we get the following.
+
+\begin{thm}{Corollary}
+The bound $\sqrt{2}$ is optimal.
+\end{thm}
+
+\section{Embeddings into ball}
+
+Let us denote by $\BB^q$ the unit ball in $q$-dimensional Euclidean space.
+At the moment we can get the optimal bound for immersions of $n$-torus into $\BB^q$ in three cases: $n=2$, $n=4$, and if the induced metric is flat.
+
+The following lemma was essentially proved by István Fáry \cite{fary}; see also survey of Serge Tabachnikov \cite{tabachnikov}.
+
+\begin{thm}{Lemma}
+Let $\iota\:\TT^n\to \BB^q$ be a smooth immersion.
+Then the average value of $|H|$ is at least $n$.
+\end{thm}
+
+\parit{Proof.}
+Consider the function $u\:p\mapsto \tfrac12\cdot |\iota(p)|^2$ on $\TT^n$.
+Note that $\Delta u=n+ \langle H,\iota\rangle$.
+It follows that the average value of $\langle H,\iota\rangle$ is $-n$.
+Since $|\iota|\le1$, we get the result.
+\qeds
+
+The lemma and formula implies the following.
+
+\begin{thm}{Proposition}
+Let $L$ be a flat closed $n$-dimensional submanifold in $\BB^q$
+Then the average value of $\zh$ on $L$ is at least  $\tfrac{3\cdot n}{n+2}$.
+\end{thm}
+
+\begin{thm}{Theorem}
+Suppose $\iota\:\TT^2\to \BB^q$ be a smooth immersion.
+Then the average value of $\zh$ on $\TT^2$ is at least $\tfrac32$.
+\end{thm}
+
+\parit{Proof.}
+By the lemma, the average value of $|H|^2$ is at least 4.
+Applying the formula and Gauss--Bonnet,
+we get that the result.
+\qeds
+
+
+
+\begin{thm}{Theorem}
+Suppose $\iota\:\TT^4\to \BB^q$ be a smooth immersion.
+Then $\zh(p)\ge 2$ for some point  $p\in\TT^4$.
+\end{thm}
+
+
+
+
+Let $g$ be a Reimannian metric on $\TT^n$.
+Suppose $n\ge 3$, and $u\:\TT^n\to \RR$ is a positive function.
+The scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$
+can be expressed as 
+\[\left(\Sc\cdot u-\tfrac{4{\cdot}(n-1)}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}}.\]
+Recall that \emph{any Reimannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point}.
+Therefore we get the following.
+
+\begin{thm}{Claim}
+Let $g$ be a Reimannian metric on $\TT^n$.
+Then, for any positive smooth function $u$ on $\TT^n$, the function 
+\[\Sc\cdot u-\tfrac{4{\cdot}(n-1)}{n-2}{\cdot}\Delta u\]
+returns a nonpositive value at some point 
+\end{thm}
+
+
+\parit{Proof of the theorem.}
+Consider the function $u\:p\mapsto \exp(-|\iota(p)|^2)$.
+
+We will apply the following formula
+\[\Delta(\phi\circ f)=\phi'\cdot \Delta f+\phi''\cdot|\nabla f|^2\]
+to $f\:p\mapsto \tfrac12\cdot |\iota(p)|^2$ and $\phi\:x\mapsto \exp(-2\cdot x)$; so $u=\phi\circ f$.
+
+Let $\alpha=\measuredangle (H,\iota)$, then $\Delta f=4+|H|\cdot |\iota|\cdot \cos\alpha$ and $|\nabla f|\le|\iota|\cdot \sin\alpha$.
+Therefore
+\[ \Delta u\le u\cdot[-2\cdot (4+|H|\cdot |\iota|\cdot \cos\alpha)+(2\cdot|\iota|\cdot \sin\alpha)^2].\]
+Applying the claim for $n=4$, we get that 
+\[\Sc\cdot u-6\cdot \Delta u\]
+returns a negative value at some point $p\in \TT^4$.
+Applying the formula, we get
+\begin{align*}12\cdot \zh(p)
+&\ge
+\tfrac32\cdot [(|H(p)|-4)^2+16].
+\end{align*}
+
+Whence the statement follows.
+\qeds
+
+\begin{thm}{Open question}
+Suppose $\iota\:\TT^n\to \BB^q$ be a smooth immersion.
+It it true taht $\zh(p)\ge \tfrac{3\cdot n}{n+2}$ at some point $p\in\TT^n$?
+\end{thm}
+
+If true, then for large $q\gg n^2\gg1$, the optimal asymptotic lower bound on normal curvatures is $\sqrt{3}$.
+Playing a bit with the formulas above, seems to give asymptotic lower bound $\sqrt{2}$.
+It seems that we were not able to guess the optimal choice of $u$.
+
+
+{\sloppy
+\printbibliography[heading=bibintoc]
+\fussy
+}
+
+\end{document}
+
+\section{Extrinsic curvature tensor}
+
+Let $\T$ be a vector space with a scalar product, $\T^n$ will denote
+its tensor power of degree $n$, $\S^n(\T)$ and $\Lambda^n(\T)$ will
+denote respectively subspace of symmetric and antisymmetric
+elements of $\T^n$. The scalar product on $\T$ induces a
+scalar product on $\T^n$ and all its subspaces.
+
+The following subspace of $\T^4$
+$$\A^4(\T)=\Lambda^4(\T)^\bot\cap \S^2(\Lambda^2(\T))$$
+is formed by all possible curvature tensors
+on the tangent space $\T$.
+In an equivalent way this subspace $\A^4\subset\S^2(\Lambda^2(\T))$
+can be described  as the space of all tensors in $\S^2(\Lambda^2(\T))$
+satisfying the first Bianchi identity
+$$\Rm(X,Y,Z,W)+\Rm(Y,Z,X,W)+\Rm(Z,X,Y,W)=0.$$
+In particular, the subspace $\A^4(\T)$ does not depend on the choice of scalar product on $\T$.
+
+\medskip
+
+Let $M\subset\RR^q$ be a smooth submanifold and $s_x\:\S^2(\T_xM)\to \N_x M$ its second fundamental form at $x\in M$;
+here $\T M$ and $\N  M$ are tangent and normal bundles over $M$ respectively.
+Consider the \emph{extrinsic curvature tensor}
+$$\Phi (X,Y,Z,W)\df \langle s(X,Y),s(Z,W)\rangle,$$
+here $\Phi$ is a section of $\S^2(\S^2(\T M))$.
+
+Tensor $\Phi$ can be written as
+$$\Phi(X,Y,Z,W)=E(X,Y,Z,W)+\tfrac 1 3\cdot(\Rm(X,Z,Y,W)+\Rm(X,W,Y,Z))
+\eqno(*)$$ 
+where $E$ is the total symmetrization of $\Phi$; that is,
+$$E(X,Y,Z,W)=\tfrac 1 3\cdot
+(\Phi(X,Y,Z,W)+\Phi(Y,Z,X,W)+\Phi(Z,X,Y,W))\in \S^4(\T),$$
+and
+$$\Rm(X,Y,Z,W)=\Phi(X,Z,Y,W)-\Phi(X,W,Y,Z)\in \A^4(\T)$$
+is the Riemannian curvature tensor of $M$.
+
+Tensor $E$ represents the \emph{purely extrinsic} part $\Phi$.
+Note that $E\in \S^4(\T)\z\subset\S^2(\S^2(\T))$.
+Tensor $E$ measures wrinkling of the embedding --- the more it is wrinkled the bigger $E$ gets.
+Note that
+$f(X)=E(X,X,X,X)=|s(X,X)|^2$
+is homogeneous polynomial of degree $4$ on $\T$ 
+and it describes $E$ completely.
+Therefore in some sense, the $E$-tensor is a higher order analog of the metric tensor.
+
+
+Observe that 
+\begin{itemize}
+ \item The extrinsic curvature tensor $\Phi$ remembers defines the second fundamental form up to action of orthogonal group on $\N$.
+ \item The quantities $h^2$, $\zh$ and $\sigma$ in the claim depend linearly on $\Phi$ and they are invariant with respect to the action of orthogonal group on $\T$.
+\end{itemize}
+
+It follows that passing averaging $\Phi$ along the action of orthogonal groups on $\T$ does not change the quantities in the claim.
+In particular, we can assume that both $\Rm$ and $E$ are invariant with respecct to orthogonal group.
+It follows that $\Rm$ has constant sectional curvature, say $\sigma$ and $E(\vec x,\vec x,\vec x,\vec x)=\zh\cdot |\vec x|^4$ for some $\zh$.
+Since $\Phi$ can be expressed linearly from $\Rm$ and $E$, it completely described by two parameters --- $\sigma$ and $\zh$.
+Therefore it is sufficient to check the formula for two symmetric embedding with linear independent pairs $\sigma,\zh$.
+One such embedding is standard embedding of sphere; in this case we have $\sigma=\zh=|h|^2=1$.
+Veronesse immersion gives another example, where direct calculations show that $\zh=\tfrac{n-1}{n+1}$, $\sigma=-\tfrac{n+2}{2\cdot (n+1)}$ and $|h^2|=0$. 
+
