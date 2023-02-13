@@ -60,7 +60,7 @@ It is uniquely defined by the following identity
 where $\vec v\in \T_pL$ and $\gamma_{\vec v}$ an $L$-geodesic that starts at $p$ with initial velocity vector~$\vec v$.
 
 Suppose $\II$ is the second fundamental form at $p$.
-Denote by $H(p)$, $\zh(p)$, and $\Sc(p)$ the mean curvature vector, average value of $|\II(\vec u,\vec u)|^2$, and the scalar curvature of $L$ at $p$ respectively. 
+Denote by $H(p)$, $\zh(p)$, and $\Sc(p)$ the mean curvature vector, the average value of $|\II(\vec u,\vec u)|^2$, and the scalar curvature of $L$ at $p$ respectively. 
 
 Let us denote by $\widetilde{\Sc}$ the \emph{outer scalar curvature} of $L$ in $M$;
 that is, if $e_1,\dots,e_n$ is an orthonormal basis of $\T_pL$, then 
@@ -91,7 +91,7 @@ n\cdot (n+2)\cdot\zh
 3\cdot \sum_i k_i^2+2\cdot \sum_{i<j} k_i\cdot k_j.
 \]
 The last identity follows since $\zh$ is the average value of $\left(\sum_i k_i\cdot x_i^2\right)^2$ on $\SSS^{n-1}$.
-One has take into account that $3$ and $1$
+One has to take into account that $3$ and $1$
 are the average values of  $n\cdot (n+2)\cdot x_i^4$ and $n\cdot (n+2)\cdot x_i^2\cdot x_j^2$ for $i\ne j$ on the unit sphere $\SSS^{n-1}\subset \RR^n$.
 Here we assume that $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
 
@@ -100,7 +100,7 @@ By Gauss formula,
 \[\Sc-\widetilde\Sc=2\cdot\sum_{i<j}k_i\cdot k_j.\]
 It remains to rewrite this formula using the expressions for $|H|^2$ and $\zh$.
 
-If $\codim L =k>1$, then the second fundamental from can be presented as direct sum of $k$ real-valued quadratic forms $\II_1\oplus\dots\oplus \II_k$;
+If $\codim L =k>1$, then the second fundamental form can be presented as a direct sum of $k$ real-valued quadratic forms $\II_1\oplus\dots\oplus \II_k$;
 that is,
 \[\II=e_1\cdot\II_1+\dots+e_k\cdot \II_k,\]
 where $e_1,\dots, e_k$ is an orthonormal basis of $\N_pL$.
@@ -123,7 +123,7 @@ Whence the general case follows.
 \section{Embeddings into sphere}
 
 The obtained formula shows that some results in \cite{gromov1,gromov2,gromov3} are exact.
-In this and the following section we will list of some of them.
+In this and the following section, we will list of some of them.
 
 Let us denote by $\TT^n$ the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
 
@@ -152,7 +152,7 @@ The bound $\sqrt{2}$ is optimal.
 Let us denote by $\BB^q$ the unit ball in $q$-dimensional Euclidean space.
 At the moment we can get the optimal bound for immersions of $n$-torus into $\BB^q$ in three cases: $n=2$, $n=4$, and if the induced metric is flat.
 
-The following lemma was essentially proved by István Fáry \cite{fary}; see also survey of Serge Tabachnikov \cite{tabachnikov}.
+The following lemma was essentially proved by István Fáry \cite{fary}; see also the survey of Serge Tabachnikov \cite{tabachnikov}.
 
 \begin{thm}{Lemma}
 Let $\iota\:\TT^n\to \BB^q$ be a smooth immersion.
@@ -166,7 +166,7 @@ It follows that the average value of $\langle H,\iota\rangle$ is $-n$.
 Since $|\iota|\le1$, we get the result.
 \qeds
 
-The lemma and formula implies the following.
+The lemma and formula imply the following.
 
 \begin{thm}{Proposition}
 Let $L$ be a flat closed $n$-dimensional submanifold in $\BB^q$
@@ -181,7 +181,7 @@ Then the average value of $\zh$ on $\TT^2$ is at least $\tfrac32$.
 \parit{Proof.}
 By the lemma, the average value of $|H|^2$ is at least 4.
 Applying the formula and Gauss--Bonnet,
-we get that the result.
+we get the result.
 \qeds
 
 
@@ -194,16 +194,16 @@ Then $\zh(p)\ge 2$ for some point  $p\in\TT^4$.
 
 
 
-Let $g$ be a Reimannian metric on $\TT^n$.
+Let $g$ be a Riemannian metric on $\TT^n$.
 Suppose $n\ge 3$, and $u\:\TT^n\to \RR$ is a positive function.
 The scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$
 can be expressed as 
 \[\left(\Sc\cdot u-\tfrac{4{\cdot}(n-1)}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}}.\]
-Recall that \emph{any Reimannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point}.
+Recall that \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point}.
 Therefore we get the following.
 
 \begin{thm}{Claim}
-Let $g$ be a Reimannian metric on $\TT^n$.
+Let $g$ be a Riemannian metric on $\TT^n$.
 Then, for any positive smooth function $u$ on $\TT^n$, the function 
 \[\Sc\cdot u-\tfrac{4{\cdot}(n-1)}{n-2}{\cdot}\Delta u\]
 returns a nonpositive value at some point 
@@ -234,12 +234,11 @@ Whence the statement follows.
 
 \begin{thm}{Open question}
 Suppose $\iota\:\TT^n\to \BB^q$ be a smooth immersion.
-It it true taht $\zh(p)\ge \tfrac{3\cdot n}{n+2}$ at some point $p\in\TT^n$?
+Is it true that $\zh(p)\ge \tfrac{3\cdot n}{n+2}$ at some point $p\in\TT^n$?
 \end{thm}
 
 If true, then for large $q\gg n^2\gg1$, the optimal asymptotic lower bound on normal curvatures is $\sqrt{3}$.
-Playing a bit with the formulas above, seems to give asymptotic lower bound $\sqrt{2}$.
-It seems that we were not able to guess the optimal choice of $u$.
+Playing a bit with the formulas above seems to give an asymptotic lower bound $\sqrt{8/3}$; it is quite close to $\sqrt{3}$ and can be improved a bit further, but the optimal bound requires an extra idea.
 
 
 {\sloppy
