@@ -38,7 +38,7 @@ pdfauthor={\theauthors}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
-\title{\thetitle}
+\title{}
 \author{}
 \date{}
 \maketitle
@@ -51,16 +51,16 @@ pdfauthor={\theauthors}
 
 
 Let $L$ be a smooth $n$-dimensional submanifold in a Riemannian manifold $M$.
-Choose a point $p\in L$;
-denote by $\T_pL$ and $\N_pL$ the tangent and normal spaces of $L$ at $p$.
+Let us denote by $\T_pL$ and $\N_pL$ the tangent and normal spaces of $L$ at $p$.
 
 Recall that \emph{second fundamental form} $\II$ at $p$ is a symmetric quadratic form on $\T_pL$ with values in $\N_pL$.
 It is uniquely defined by the following identity
 \[\II(\vec v,\vec v)\df \gamma''_{\vec v}(0),\]
 where $\vec v\in \T_pL$ and $\gamma_{\vec v}$ an $L$-geodesic that starts at $p$ with initial velocity vector~$\vec v$.
 
-Suppose $\II$ is the second fundamental form at $p$.
-Denote by $H(p)$, $\zh(p)$, and $\Sc(p)$ the mean curvature vector, the average value of $|\II(\vec u,\vec u)|^2$, and the scalar curvature of $L$ at $p$ respectively. 
+Given $p\in L$,
+denote by $\Sc(p)$, $H(p)$, and $\zh(p)$
+the scalar curvature, the mean curvature vector, and the average value of $|\II(\vec u,\vec u)|^2$ at $p$ respectively.
 
 Let us denote by $\widetilde{\Sc}$ the \emph{outer scalar curvature} of $L$ in $M$;
 that is, if $e_1,\dots,e_n$ is an orthonormal basis of $\T_pL$, then 
@@ -78,12 +78,14 @@ holds for any smooth $n$-dimensional submanifold $L$ in a Riemannian manifold.
 
 
 \parit{Proof.}
+Without loss of generality, we can assume that the ambient manifold is flat;
+in particular $\widetilde\Sc=0$.
+
 Assume $\codim L=1$.
 Choose $p\in L$;
 denote by $k_1,\dots,k_n$ the principal curvatures of $L$ at $p$.
-Evidently, 
+Note that
 \[|H|^2= \sum_ik_i^2+2\cdot\sum_{i<j}k_i\cdot k_j.\]
-
 Further, 
 \[
 n\cdot (n+2)\cdot\zh
@@ -97,21 +99,21 @@ Here we assume that $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
 
 
 By Gauss formula,
-\[\Sc-\widetilde\Sc=2\cdot\sum_{i<j}k_i\cdot k_j.\]
+\[\Sc=2\cdot\sum_{i<j}k_i\cdot k_j.\]
 It remains to rewrite this formula using the expressions for $|H|^2$ and $\zh$.
 
 If $\codim L =k>1$, then the second fundamental form can be presented as a direct sum of $k$ real-valued quadratic forms $\II_1\oplus\dots\oplus \II_k$;
 that is,
 \[\II=e_1\cdot\II_1+\dots+e_k\cdot \II_k,\]
 where $e_1,\dots, e_k$ is an orthonormal basis of $\N_pL$.
-Denote by $\Sc_i-\widetilde{\Sc}_i$, $H_i$, and $\zh_i$ the values associated with $\II_i$.
+Denote by $\Sc_i$, $H_i$, and $\zh_i$ the values associated with $\II_i$.
 From above, we get
-\[\Sc_i-\widetilde{\Sc}_i=\tfrac32\cdot |H_i|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh_i\]
+\[\Sc_i=\tfrac32\cdot |H_i|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh_i\]
 for each $i$.
 
 Note that 
 \begin{align*}
-\Sc-\widetilde{\Sc}&=(\Sc_1-\widetilde{\Sc}_1)+\dots+(\Sc_k-\widetilde{\Sc}_k),
+\Sc&=\Sc_1+\dots+\Sc_k,
 \\
 |H^2|&=|H_1|^2+\dots+|H_k|^2,
 \\
@@ -126,20 +128,21 @@ The obtained formula shows that some results in \cite{gromov1,gromov2,gromov3} a
 In this and the following section, we will list of some of them.
 
 Let us denote by $\TT^n$ the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
+The next statement follows from the formula since any Riemannian metric on the torus has nonpositive scalar curvature at some point.
 
 \begin{thm}{Theorem}
 Suppose $\iota\:\TT^n\looparrowright \SSS^q$ be a smooth immersion.
 Then 
-\[\zh(p)\ge \tfrac{2\cdot n}{n+2}\]
+\[\zh(p)\ge \tfrac{2\cdot (n-1)}{n+2}\]
 at some point $p\in \TT^n$.
 
 In particular, there is a tangent direction of $\TT^n$ with normal curvature at least 
-\[\kappa_n=\sqrt{\tfrac{2\cdot n }{n+2}}.\]
+\[\kappa_n=\sqrt{\tfrac{2\cdot (n-1)}{n+2}}.\]
 \end{thm}
 
 It was shown \cite{gromov1} that there is an isometric embedding of the torus $\TT^n$ with a flat metric that has normal curvature $\kappa_n$ in any direction at any point. 
 In particular, the above bound on normal curvature is optimal.
-Applying the compression lemma in \cite{gromov3}, we also get the following: \textit{any closed smooth manifold is diffeomorphic to a submanifold with normal curvatures at most $\sqrt{2}$ in the unit sphere of sufficiently large dimension.}
+The compression lemma \cite{gromov3}, implies that \textit{any closed smooth manifold is diffeomorphic to a submanifold with normal curvatures at most $\sqrt{2}$ in the unit sphere of sufficiently large dimension.}
 \textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$.}
 Applying the theorem, we get the following.
 
@@ -150,8 +153,16 @@ The bound $\sqrt{2}$ is optimal.
 \section{Embeddings into ball}
 
 Let us denote by $\BB^q$ the unit ball in $q$-dimensional Euclidean space.
-At the moment we can get the optimal bound for immersions of $n$-torus into $\BB^q$ in three cases: $n=2$, $n=4$, and if the induced metric is flat.
 
+\begin{thm}{Question}
+Suppose $\iota\:\TT^n\to \BB^q$ be a smooth immersion.
+Is it true that $\zh(p)\ge \tfrac{3\cdot n}{n+2}$ at some point $p\in\TT^n$?
+\end{thm}
+
+If true, then for large $q\gg n^2\gg1$, the optimal asymptotic lower bound on normal curvatures is $\sqrt{3}$.
+Playing a bit with the formulas below seems to give an asymptotic lower bound $\sqrt{8/3}$; it is quite close to $\sqrt{3}$ and can be improved a bit further, but the optimal bound requires an extra idea.
+
+Below we answer the question in three cases: $n=2$, $n=4$, and if the induced metric is flat.
 The following lemma was essentially proved by István Fáry \cite{fary}; see also the survey of Serge Tabachnikov \cite{tabachnikov}.
 
 \begin{thm}{Lemma}
@@ -169,7 +180,7 @@ Since $|\iota|\le1$, we get the result.
 The lemma and formula imply the following.
 
 \begin{thm}{Proposition}
-Let $L$ be a flat closed $n$-dimensional submanifold in $\BB^q$
+Let $L$ be a flat closed $n$-dimensional submanifold in $\BB^q$.
 Then the average value of $\zh$ on $L$ is at least  $\tfrac{3\cdot n}{n+2}$.
 \end{thm}
 
@@ -187,7 +198,7 @@ we get the result.
 
 
 \begin{thm}{Theorem}
-Suppose $\iota\:\TT^4\to \BB^q$ be a smooth immersion.
+Suppose $\iota\:\TT^4\to \BB^q$ is a smooth immersion.
 Then $\zh(p)\ge 2$ for some point  $p\in\TT^4$.
 \end{thm}
 
@@ -232,13 +243,7 @@ Applying the formula, we get
 Whence the statement follows.
 \qeds
 
-\begin{thm}{Open question}
-Suppose $\iota\:\TT^n\to \BB^q$ be a smooth immersion.
-Is it true that $\zh(p)\ge \tfrac{3\cdot n}{n+2}$ at some point $p\in\TT^n$?
-\end{thm}
 
-If true, then for large $q\gg n^2\gg1$, the optimal asymptotic lower bound on normal curvatures is $\sqrt{3}$.
-Playing a bit with the formulas above seems to give an asymptotic lower bound $\sqrt{8/3}$; it is quite close to $\sqrt{3}$ and can be improved a bit further, but the optimal bound requires an extra idea.
 
 
 {\sloppy
