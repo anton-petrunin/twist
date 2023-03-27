@@ -49,8 +49,8 @@ isbn=false]{biblatex}
 \renewcommand{\thesubsection}{\thesection\Alph{subsection}}
 
 \newcounter{thm}[section]
-\renewcommand{\thethm}{\arabic{thm}}
-\def\claim#1{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf #1.}
+\renewcommand{\thethm}{\thesection.\arabic{thm}}
+\def\claim#1{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf\thesection.\arabic{thm}. #1.}
 \it\ %\ignorespaces
 }
 \def\endclaim{
@@ -158,7 +158,7 @@ isbn=false]{biblatex}
 \newcounter{eqtn}
 \renewcommand{\@eqnnum}{\theeqtn}
 \renewcommand{\theeqtn}{\numform{eqtn}}
-\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\eqno\text{\numform{eqtn}\label{#1}}}
+\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}
 
 \let\oldcdot\cdot
 \def\cdot{{\hskip0.5pt\oldcdot\hskip0.5pt}}
