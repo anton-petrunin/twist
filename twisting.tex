@@ -34,7 +34,6 @@ pdfauthor={\theauthors}
 %\overfullrule=100mm
 
 \begin{document}
-
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
@@ -44,44 +43,97 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We give an optimal lower bound on principle curvatures of immersed $n$-torus in a Euclidean ball of large dimension. 
+We give an optimal lower bound on principal curvatures of immersed $n$-torus in a Euclidean ball of large dimension. 
 \end{abstract}
 
-\section{Gauss formula}
+\section{Introduction}
 
+This note is inspired by examples of isometric embeddings of $n$-torus $\TT^n$ into the unit ball $\BB^q$ of $q$-dimensional Euclidean space for all large $q$ such that all it principal curvatures identically equal to $\sqrt{3\cdot n/(n+2)}$ and the induced metric is flat.
+These examples are geodesic subtorii in  Clifford torii;
+they were constructed by Michael Gromov; see \cite[2.A]{gromov3} and \cite[1.1.A.]{gromov2}. 
 
+The existence of such examples implies the following surprising results:
+\textit{any closed smooth manifold admits a smooth embedding into $\BB^q$ for large $q$ with normal curvatures less than $\sqrt{3}$.}
+\textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$;
+see \cite[1.D]{gromov3} and \cite[1.1.C]{gromov2}.}
 
-Let $L$ be a smooth $n$-dimensional submanifold in a Riemannian manifold $M$.
-Let us denote by $\T_pL$ and $\N_pL$ the tangent and normal spaces of $L$ at $p$.
+The following theorem implies that the bound $\sqrt{3\cdot n/(n+2)}$ is optimal.
 
-Recall that \emph{second fundamental form} $\II$ at $p$ is a symmetric quadratic form on $\T_pL$ with values in $\N_pL$.
+\begin{thm}{Theorem}
+\label{thm:main}
+Suppose $\TT^n$ is smoothly immersed in $\BB^q$.
+Then its maximal normal curvature is at least $\sqrt{3\cdot n/(n+2)}$.
+\end{thm}
+
+To make the statement more exact, we need some notations.
+Assume that a smooth $n$-dimensional manifold $L$ is immersed in the Euclidean space $\RR^q$;
+we will always assume that $L$ is equipped with induced Riemannian metric.
+Let us denote by $\T_x$ and $\N_x$ the tangent and normal spaces of $L$ at~$x$.
+
+Recall that \emph{second fundamental form} $\II$ at $x$ is a symmetric quadratic form on $\T_x$ with values in $\N_x$.
 It is uniquely defined by the following identity
-\[\II(\vec v,\vec v)\df \gamma''_{\vec v}(0),\]
-where $\vec v\in \T_pL$ and $\gamma_{\vec v}$ an $L$-geodesic that starts at $p$ with initial velocity vector~$\vec v$.
+\[\II(\vec v,\vec v)\equiv \gamma''_{\vec v}(0),\]
+where $\vec v\in \T_x$ and $\gamma_{\vec v}$ an $L$-geodesic that starts at $x$ with initial velocity vector~$\vec v$.
 
-Given $p\in L$,
-denote by $\Sc(p)$, $H(p)$, and $\zh(p)$
-the scalar curvature, the mean curvature vector, and the average value of $|\II(\vec u,\vec u)|^2$ at $p$ respectively.
+Given $x\in L$,
+denote by $\zh(x)$ the average value of $|\II(\vec u,\vec u)|^2$ for $\vec u\in\T_x$ such that $|\vec u|=1$;
+in other words, $\zh(x)$ is the average value of squared normal curvatures at $x$.
+(The letter $\zh$ suppose to remind that it is squared $K$.)
 
-Let us denote by $\widetilde{\Sc}$ the \emph{outer scalar curvature} of $L$ in $M$;
-that is, if $e_1,\dots,e_n$ is an orthonormal basis of $\T_pL$, then 
-\[\widetilde\Sc(p)=2\cdot \sum_{i<j} K_{ij},\]
-where $K_{ij}$ denotes sectional curvature of $M$ in the direction spanned by $e_i$ and~$e_j$.
+\begin{thm}{Theorem}
+Suppose $\TT^n$ is smoothly immersed in $\BB^q$.
+Let us equip $\TT^n$ with the induced Riemannian metric;
+so we can take average values with respect to the induced volume.
 
 
-The following formula is closely related to \cite[5.B]{gromov1}.
+\begin{subthm}{strong:2D}
+If $n=2$, then the average value of $\zh$ is at least $\tfrac32$.
+\end{subthm}
 
-\begin{thm}{Formula}\label{formula:gauss}
-The following identity
-\[\Sc-\widetilde{\Sc}=\tfrac32\cdot |H|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh\]
-holds for any smooth $n$-dimensional submanifold $L$ in a Riemannian manifold.
+\begin{subthm}{strong:flat}
+If the metric on $\TT^n$ is flat, then the average value of $\zh$ is at least $3\cdot \tfrac{n}{n+2}$.
+\end{subthm}
+
+\begin{subthm}{strong:sphere}
+If the image of $\TT^n$ lies in $\SSS^{q-1}=\partial\BB^q$, then  $\zh\ge 3\cdot \tfrac{n}{n+2}$ at some point.
+\end{subthm}
+
+\begin{subthm}{strong:4D}
+If $n\le 4$, then $\zh\ge 3\cdot \tfrac{n}{n+2}$ at some point of $\TT^n$.
+\end{subthm}
+
+\begin{subthm}{strong:main}
+If the normal curvatures of $\TT^n$ do not exceed $2$, then $\zh\ge 3\cdot \tfrac{n}{n+2}$ at some point of $\TT^n$.
+\end{subthm}
+
+\end{thm}
+
+Note that part \ref{SHORT.strong:main} is a stronger version of \ref{thm:main}.
+The remaining statements \ref{SHORT.strong:2D}--\ref{SHORT.strong:4D} are stronger versions of \ref{thm:main} in some partial cases.
+All this follows since the normal curvature in some direction at $x$ is at least $\sqrt{\zh(x)}$.
+
+\begin{thm}{Open question}
+Is it true that for any smooth immersion $\TT^n\looparrowright\BB^q$ we have $\zh\ge3\cdot \tfrac{n}{n+2}$ at some point? 
 \end{thm}
 
 
-\parit{Proof.}
-Without loss of generality, we can assume that the ambient manifold is flat;
-in particular $\widetilde\Sc=0$.
+\section{Gauss formula}
 
+Recall that $L$ is a smooth $n$-dimensional manifold immersed in $\RR^q$.
+Given $p\in L$,
+denote by $\Sc(p)$ and $H(p)$
+the scalar curvature, the mean curvature vector.
+
+The following version of the Gauss formula plays a central role in all proofs;
+it is used instead of the formula in \cite[5.B]{gromov1}.
+
+\begin{thm}{Gauss formula}\label{formula:gauss}
+The following identity
+\[\Sc=\tfrac32\cdot |H|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh\]
+holds for any smooth $n$-dimensional immersed manifold in a Euclidean space.
+\end{thm}
+
+\parit{Proof.}
 Assume $\codim L=1$.
 Choose $p\in L$;
 denote by $k_1,\dots,k_n$ the principal curvatures of $L$ at $p$.
@@ -95,134 +147,109 @@ n\cdot (n+2)\cdot\zh
 \]
 The last identity follows since $\zh$ is the average value of $\left(\sum_i k_i\cdot x_i^2\right)^2$ on the unit sphere $\SSS^{n-1}\subset\RR^n$.
 One has to take into account that the following functions have unit average values:
-$\tfrac13\cdot n\cdot (n+2)\cdot x_i^4$ and $n\cdot (n+2)\cdot x_i^2\cdot x_j^2$ for $i\ne j$.
-Here we assume that $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
+$\tfrac13\cdot n\cdot (n+2)\cdot x_i^4$ and $n\cdot (n+2)\cdot x_i^2\cdot x_j^2$ for $i\ne j$;
+here we assume that $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
 
-
-By Gauss formula,
+By the standard Gauss formula,
 \[\Sc=2\cdot\sum_{i<j}k_i\cdot k_j.\]
-It remains to rewrite this formula using the expressions for $|H|^2$ and $\zh$.
+It remains to rewrite the right-hand side using the expressions for $|H|^2$ and $\zh$.
 
 If $\codim L =k>1$, then the second fundamental form can be presented as a direct sum of $k$ real-valued quadratic forms $\II_1\oplus\dots\oplus \II_k$;
 that is,
 \[\II=e_1\cdot\II_1+\dots+e_k\cdot \II_k,\]
-where $e_1,\dots, e_k$ is an orthonormal basis of $\N_pL$.
+where $e_1,\dots, e_k$ is an orthonormal basis of $\N_p$.
 Denote by $\Sc_i$, $H_i$, and $\zh_i$ the values associated with $\II_i$.
 From above, we get
 \[\Sc_i=\tfrac32\cdot |H_i|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh_i\]
 for each $i$.
 
 Note that 
-\begin{align*}
-\Sc&=\Sc_1+\dots+\Sc_k,
-\\
-|H^2|&=|H_1|^2+\dots+|H_k|^2,
-\\
-\zh&=\zh_1+\dots+\zh_k.
-\end{align*}
+\[
+\Sc=\sum_i\Sc_i,
+\qquad
+|H^2|=\sum_i|H_i|^2,
+\quad\text{and}\quad
+\zh=\sum_i\zh_i.
+\]
 Hence the general case follows.
 \qeds
 
-\section{Embeddings into sphere}
+\section{Special cases}
 
-The obtained formula shows that some results in \cite{gromov1,gromov2,gromov3} are exact.
-In this and the following section, we will list of some of them.
+Recall that $\TT^n$ is the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles,
+and the unit ball centered at the origin of the $q$-dimensional Euclidean space $\RR^q$ is denoted by $\BB^q$.
 
-Let us denote by $\TT^n$ the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
-The next statement follows from the formula since any Riemannian metric on the torus has nonpositive scalar curvature at some point.
-
-\begin{thm}{Theorem}
-Suppose $\iota\:\TT^n\looparrowright \SSS^q$ is a smooth immersion.
-Then 
-\[\zh(p)\ge 2\cdot \tfrac{n-1}{n+2}\]
-at some point $p\in \TT^n$.
-
-In particular, there is a tangent direction of $\TT^n$ with normal curvature at least 
-\[\kappa_n=\sqrt{2\cdot\tfrac{n-1}{n+2}}.\]
-\end{thm}
-
-It was shown \cite{gromov1} that there is an isometric embedding of the torus $\TT^n$ with a flat metric that has normal curvature $\kappa_n$ in any direction at any point. 
-In particular, the above bound on normal curvature is optimal.
-The compression lemma \cite{gromov3}, implies that \textit{any closed smooth manifold is diffeomorphic to a submanifold with normal curvatures at most $\sqrt{2}$ in the unit sphere of sufficiently large dimension.}
-\textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$.}
-Applying the theorem, we get the following.
-
-\begin{thm}{Corollary}
-The bound $\sqrt{2}$ is optimal.
-\end{thm}
-
-\section{Embeddings into ball}
-
-Let us denote by $\BB^q$ the unit ball in $q$-dimensional Euclidean space.
-The following lemma was essentially proved by István Fáry \cite{fary}; see also the survey of Serge Tabachnikov \cite{tabachnikov}.
+The following lemma was essentially proved by István Fáry \cite{fary,tabachnikov}.
 
 \begin{thm}{Lemma}\label{lem:av(H)}
-Let $\iota\:\TT^n\looparrowright \BB^q$ be a smooth immersion.
-Then the average value of $|H|$ is at least $n$.
+Let $L$ be a closed $n$-dimension manifold that is smoothly immersed in $\BB^q$.
+Then the average value of $|H|$ on $L$ is at least $n$.
 \end{thm}
 
 \parit{Proof.}
-Consider the function $u\:p\mapsto \tfrac12\cdot |\iota(p)|^2$ on $\TT^n$.
+Consider the function $u\:p\mapsto \tfrac12\cdot |\iota(p)|^2$ on $L$.
 Note that
 \[\Delta u=n+ \langle H,\iota\rangle.\]
 It follows that the average value of $\langle H,\iota\rangle$ is $-n$.
 Since $|\iota|\le1$, we get the result.
 \qeds
 
-Since $\Sc=\tfrac32\cdot |H|^2-\tfrac{n\cdot (n+2)}{2}\cdot\zh$ (see \ref{formula:gauss}),
-the lemma implies the following.
-
-\begin{thm}{Proposition}
-Let $L$ be a flat closed $n$-dimensional manifold that is isometrically immersed in $\BB^q$.
-Then the average value of $\zh$ on $L$ is at least~$3\cdot \tfrac{n}{n+2}$.
-\end{thm}
-
-\begin{thm}{Theorem}\label{thm:2d}
-Suppose $\iota\:\TT^2\to \BB^q$ is a smooth immersion.
-Then the average value of $\zh$ on $\TT^2$ is at least $\tfrac32$.
-\end{thm}
-
-\parit{Proof.}
+\parit{Proof of \ref{strong:2D}.}
 By \ref{lem:av(H)}, the average value of $|H|^2$ is at least 4.
-Applying the formula and Gauss--Bonnet,
-we get the result.
+Further, by the Gauss--Bonnet formula, scalar curvature (which is twice the Gauss curvature in this case) has zero average.
+Therefore \ref{formula:gauss} implies the statement.
 \qeds
 
-\begin{thm}{Theorem}\label{thm:main}
-Let $\iota\:\TT^n\looparrowright\BB^q$ be a smooth immersion.
-Then its maximal normal curvature is at least $\sqrt{3\cdot \tfrac{n}{n+2}}$.
-\end{thm}
+\parit{Proof of \ref{strong:flat}.}
+By \ref{lem:av(H)},
+the average value of $|H|^2$ is at least $n^2$.
+Since $\Sc\equiv0$, it remains to apply \ref{formula:gauss}.
+\qeds
 
-\parit{Frame of the proof.}
-The case $n=2$ follows from \ref{thm:2d};
-so we can assume that $n\ge 3$.
-We will prove that \textit{if the normal curvatures at most $2$,
-then 
-\[\zh\ge 3\cdot \tfrac{n}{n+2}\eqlbl{eq:zh>=3}\]
-at some point}.
-Clearly it implies \ref{thm:main}.
-The following lemma tells how we are going to use the assumtion on normal curvatures.
-In case $n\le4$, the proof below implies \ref{eq:zh>=3} without this assumption.
+\parit{Proof of \ref{strong:sphere}.} 
+Since the image lies in the unit sphere, we have that $|H|^2$ is at least $n^2$ at each point.
+Since $\TT^n$ does not admit a metric with positive scalar curvature \cite[Cor. A]{gromov-lawson}, we have $\Sc(x)\le 0$ at some point $x$.
+It remains to apply \ref{formula:gauss} at $x$.
+\qeds
+
+\section{Main case}
+
+The following lemma is an easy corollary of the bow lemma of Axel Schur \cite{shur,petrunin-zamora}.
+It tells how we use the assumption in \ref{strong:main} that normal curvatures do not exceed~$2$.
+If $n\le4$, then the proof works without this assumption.
 
 \begin{thm}{Lemma}\label{lem:trivial}
-Let $\iota\:M\looparrowright\BB^q$ be a smooth immersion with normal curvatures at most $2$.
-Given $p\in M$, denote by $\beta(p)$ the angle between $\iota(p)$ and the normal space at $\iota(p)$.
-Then  
-\[|\iota|\le \cos\beta.\]
+Let $L$ be a manifold smoothly immersed in $\BB^q$, and its normal curvatures are at most $2$.
+Given $x\in L$, denote by $\beta$ the angle between vector $x$ and the normal space $\N_x$.
+Then $|x|\le \cos\beta$.
 \end{thm}
 
 \parit{Proof.}
-Assume the inequality does not hold at $p$.
-Shoot a geodesic in $M$ that runs from $p$ at angle $\beta(p)$ from $\iota(p)$.
-Since this geodesic has curvature at most 2, it will leave $\BB^q$ in time $\pi$ --- a contradiction.
+Let $\xi$ be a tangent direction at $x$ such that $\measuredangle(x,\xi)\z=\tfrac\pi2-\beta$.
+In the plane spanned by $x$ and $\xi$, choose a unit-speed circle arc $\sigma$ from $0$ to $x$ that comes to $x$ in the direction opposite to $\xi$;
+extend $\sigma$ after $x$ by a unit-speed semicircle $\tilde\gamma$ with curvature $2$ in such a way that the concatenation $\sigma*\tilde\gamma$ is is an arc of a smooth convex plane curve; see the figure.
+
+\begin{wrapfigure}{r}{39 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-10}
+\vskip0mm
+\end{wrapfigure}
+
+Observe that if $|x|> \cos\beta$, then $\tilde\gamma$ leaves $\BB^q$; that is, $|\tilde\gamma(t_0)|>1$ for some $t_0$.
+
+Let $\gamma$ be the unit-speed geodesic in $L$ that runs from $x$ in the direction~$\xi$.
+Note that curvatures of $\sigma*\gamma$ do not exceed the curvatures of $\sigma*\tilde\gamma$ at the corresponding points.
+Applying the bow lemma for $\sigma*\gamma$ and $\sigma*\tilde\gamma$, we get $|\gamma(t_0)|\ge |\tilde\gamma(t_0)|$.
+It follows that $L$ does not lie in $\BB^q$ --- a contradiction.
 \qeds
 
 Let $g$ be a Riemannian metric on $\TT^n$.
-Suppose $n\ge 3$, and $u\:\TT^n\to \RR$ is a positive function.
-Here is the well-known formula for the scalar scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$:
+Suppose $n\ge 3$, and $u\:\TT^n\to \RR$ is a smooth positive function.
+Here is the well-known formula for the scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$:
 \[\left(\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}};\]
 see for example \cite[6.3]{aubin}.
-Recall that \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point}.
+Recall that \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Cor. A]{gromov-lawson}.
 Hence we get the following.
 
 \begin{thm}{Claim}\label{clm:sc-lap}
@@ -232,26 +259,28 @@ Then, for any positive smooth function $u$ on $\TT^n$, the function
 returns a nonpositive value at some point.
 \end{thm}
 
-This claim plays central role in the following proof.
+This claim plays a central role in the following proof.
 
 
 
 
-\parit{Proof of \ref{thm:main}.}
-Consider the function $u\:p\mapsto \exp(-\tfrac k2\cdot|\iota(p)|^2)$.
+\parit{Proof of \ref{strong:4D} and \ref{strong:main}.}
+The case $n=2$ follows from \ref{strong:2D};
+so we can assume that $n\ge 3$.
+Consider the function $u\:x\mapsto \exp(-\tfrac k2\cdot|x|^2)$ on the torus.
 
 We will apply the following formula
 \[\Delta(\phi\circ f)=\phi'\cdot \Delta f+\phi''\cdot|\nabla f|^2\]
-to $f\:p\mapsto \tfrac12\cdot |\iota(p)|^2$ and $\phi\:x\mapsto \exp(-k\cdot x)$; so $u=\phi\circ f$.
+to $f\:x\mapsto \tfrac12\cdot |x|^2$ and $\phi\:y\mapsto \exp(-k\cdot y)$; so $u=\phi\circ f$.
 
-Set $\alpha=\measuredangle (H,\iota)$ and $\beta$ as in \ref{lem:trivial}.
+Set $r(x)=|x|$, $\alpha(x)=\measuredangle (H(x),x)$ and $\beta(x)$ as in \ref{lem:trivial}.
 Note that 
 \[\beta\le \alpha\le \pi-\beta.
 \eqlbl{eq:beta=<alpha}\]
 Observe that
-\[\Delta f=n+|H|\cdot |\iota|\cdot \cos\alpha,
+\[\Delta f=|H|\cdot r\cdot \cos\alpha+n,
 \quad
-|\nabla f|=|\iota|\cdot \sin\beta,
+|\nabla f|=r\cdot \sin\beta,
 \quad
 \phi'=-k\cdot\phi,
 \quad
@@ -262,12 +291,14 @@ Therefore
 \begin{aligned}
 \Delta u
 &=
-u\cdot[-k\cdot n-k\cdot|H|\cdot |\iota|\cdot \cos\alpha+k^2\cdot|\iota|^2\cdot (\sin\beta)^2].
+u\cdot[-k\cdot|H|\cdot r\cdot \cos\alpha
+-k\cdot n
++k^2\cdot r^2\cdot \sin^2\beta].
 \end{aligned}
 \]
 
-By \ref{formula:gauss},
-\[\Sc=-\tfrac{n\cdot (n+2)}{2}\cdot\zh+\tfrac32\cdot |H|^2.\]
+Recall that
+$\Sc=-\tfrac{n\cdot (n+2)}{2}\cdot\zh+\tfrac32\cdot |H|^2$; see \ref{formula:gauss}.
 By \ref{clm:sc-lap}, the function
 \begin{align*}
 &\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}\cdot \Delta u= 
@@ -275,31 +306,39 @@ By \ref{clm:sc-lap}, the function
 &\quad=u\cdot\biggl[
 -\tfrac{n\cdot (n+2)}{2}\cdot\zh
 +\tfrac32\cdot |H|^2
-+4{\cdot}\tfrac{n-1}{n-2}\cdot k\cdot|H|\cdot |\iota|\cdot \cos\alpha-
++4{\cdot}\tfrac{n-1}{n-2}\cdot k\cdot|H|\cdot r\cdot \cos\alpha+
 \\
-&\qquad+4{\cdot}\tfrac{n-1}{n-2}\cdot(k\cdot n-k^2\cdot|\iota|^2\cdot (\sin\beta)^2)\biggr]
+&\qquad+4{\cdot}\tfrac{n-1}{n-2}\cdot(k\cdot n-k^2\cdot r^2\cdot \sin^2\beta)\biggr]
 \end{align*}
-returns a nonpositive value at some point $p\in \TT^n$.
+returns a nonpositive value at some point $x\in \TT^n$.
 
 Choose 
 \[k=\tfrac34\cdot\tfrac {n-2}{n-1}\cdot n,
 \quad\text{so}\quad
 n=\tfrac43\cdot\tfrac {n-1}{n-2}\cdot k.\]
-At the point $p$, we have
-\begin{align*}
+At the point $x$, we have
+\[
+\begin{aligned}
 \tfrac{n\cdot (n+2)}{2}\cdot\zh
-&\ge \tfrac32\cdot(|H|+n\cdot |\iota|\cdot \cos\alpha)^2
--\tfrac32\cdot n^2\cdot |\iota|^2\cdot \cos^2\alpha+
+&\ge \tfrac32\cdot(|H|+n\cdot r\cdot \cos\alpha)^2
+-\tfrac32\cdot n^2\cdot r^2\cdot \cos^2\alpha+
 \\
-&\qquad+3\cdot n^2-\tfrac94\cdot\tfrac{n-2}{n-1}\cdot n^2\cdot|\iota|^2\cdot (\sin\beta)^2\ge
+&\qquad+3\cdot n^2
+-\tfrac94\cdot\tfrac{n-2}{n-1}\cdot n^2\cdot r^2\cdot \sin^2\beta\ge
 \\
 &\ge\tfrac32\cdot n^2.
-\end{align*}
+\end{aligned}
+\eqlbl{eq:main}
+\]
+By \ref{eq:beta=<alpha}, $\cos^2\beta\z+\sin^2\alpha\le 1$.
+If $n\le 4$, then  $\tfrac32\ge \tfrac94\cdot\tfrac{n-2}{n-1}$;
+therefore the last inequality follows, and it proves \ref{strong:4D}.
 
-
-The last inequality follows since $\cos^2\beta+\sin^2\alpha\le 1$ and $|\iota|^2+\sin^2\beta\le 1$; see \ref{eq:beta=<alpha} and \ref{lem:trivial}.
-Hence \ref{eq:zh>=3} follows.
+If $n\ge 5$, then for the last inequality in \ref{eq:main}
+we need to use in addition that $r^2+\sin^2\beta\le 1$ which follows \ref{lem:trivial}.
+Hence \ref{strong:main} follows.
 \qeds
+
 
 {\sloppy
 \printbibliography[heading=bibintoc]
@@ -308,37 +347,73 @@ Hence \ref{eq:zh>=3} follows.
 
 \end{document}
 
-\begin{align*}
-\tfrac{n\cdot (n+2)}{2}\cdot\zh
-&\ge
-\tfrac{n-4}{2\cdot(n-2)}\cdot |H|^2
-+
-\tfrac{n-1}{n-2}\cdot(|H|+ 2\cdot k\cdot|\iota|\cdot \cos\alpha)^2+
-\\
-&\qquad+4\cdot \tfrac{n-1}{n-2}\cdot(k\cdot n-k^2\cdot|\iota|^2\cdot[\cos^2\alpha+\sin^2\beta])=
-\\
-&=\tfrac32\cdot(|H|+\tfrac{4\cdot (n-1)}{3\cdot(n-2)}\cdot k\cdot|\iota|\cdot\cos\alpha)^2+
-\\
-&\qquad
-+4\cdot \tfrac{n-1}{n-2}\cdot
-(k\cdot n-k^2\cdot|\iota|^2
-\cdot
-[\sin^2\beta+(1-\tfrac{n-4}{3\cdot (n-2)})\cdot(\cos\alpha)^2])\ge
-\\
-&\ge  \tfrac{n-1}{n-2}\cdot \frac{n^2}{
-|\iota|^2
-\cdot
-[\sin^2\beta+(1-\tfrac{n-4}{3\cdot (n-2)})\cdot(\cos\alpha)^2]}\ge
-\\
-&\ge\tfrac{3}{2}\cdot n^2.
-\end{align*}
+
+
+\parit{Proof.}
+Choose a point $x$ on the manifold, say $L$.
+Further we will identify $\T_x$ and $\T_x^*$ using the Riemannian metric.
+Let us denote by $\T_x^n$ the $n^{\text{th}}$ tensor power of $\T_x$.
+Denote by $\S^n(\T_x)$ and $\Lambda^n(\T_x)$ respectively subspace of symmetric and antisymmetric
+elements of $\T_x^n$.
+
+Let $\II$ be the second fundamental form at $x$.
+Consider the \emph{extrinsic curvature tensor}
+$$\Phi (X,Y,Z,W)\df \langle \II(X,Y),\II(Z,W)\rangle.$$
+Note that $\Phi\in\S^2(\S^2(\T_x))$.
+Observe that $\Phi$ remembers the $\II$ up to rotation of $\N_x$.
+Further, $|H|^2$, $\zh$ and $\Sc$ in the Gauss formula depend linearly on $\Phi$ and they are invariant with respect to the action of orthogonal group on $\T_x$.
+Therefore we can assume that $\Phi$ is symmetric with respect to the $\mathrm{O}(n)$-action on $\T_x$
+
+Tensor $\Phi$ can be written as
+$$\Phi(X,Y,Z,W)=E(X,Y,Z,W)+\tfrac 1 3\cdot(\Rm(X,Z,Y,W)+\Rm(X,W,Y,Z))
+\eqno(*)$$ 
+where $E$ is the total symmetrization of $\Phi$; that is,
+$$E(X,Y,Z,W)=\tfrac 1 3\cdot
+(\Phi(X,Y,Z,W)+\Phi(Y,Z,X,W)+\Phi(Z,X,Y,W))\in \S^4(\T_x),$$
+and
+$$\Rm(X,Y,Z,W)=\Phi(X,Z,Y,W)-\Phi(X,W,Y,Z)$$
+is the Riemannian curvature tensor of $L$.
+
+Since $\Phi$ is invariant with respect to the $\mathrm{O}(n)$-action on $\T_x$,
+$\Rm$ and $E$ are symmetric as well.
+Therefore $\Rm$ is completely determined by $\Sc$ and $E$ is determined by $\zh$;
+in fact $E(X,X,X,X)\equiv\zh\cdot|X|^4$.
+
+
+Tensor $E$ represents the \emph{purely extrinsic} part $\Phi$.
+In some sense, $E$ is a higher order analog of the metric tensor.
+It measures wrinkling of the embedding --- the more it is wrinkled the bigger $E$ gets.
+Note that
+\[E(X,X,X,X)=|\II(X,X)|^2\]
+is homogeneous polynomial of degree $4$ on $\T_x$ 
+and it describes $E$ completely.
+
+
+
+
+
+It follows that passing averaging $\Phi$ along the action of orthogonal groups on $\T_x$ does not change the quantities in the claim.
+In particular, we can assume that both $\Rm$ and $E$ are invariant with respecct to orthogonal group.
+It follows that $\Rm$ has constant sectional curvature, say $\sigma$ and $E(\vec x,\vec x,\vec x,\vec x)=\zh\cdot |\vec x|^4$ for some $\zh$.
+Since $\Phi$ can be expressed linearly from $\Rm$ and $E$, it completely described by two parameters --- $\sigma$ and $\zh$.
+Therefore it is sufficient to check the formula for two symmetric embedding with linear independent pairs $\sigma,\zh$.
+One such embedding is standard embedding of sphere; in this case we have $\sigma=\zh=|h|^2=1$.
+Veronesse immersion gives another example, where direct calculations show that $\zh=\tfrac{n-1}{n+1}$, $\sigma=-\tfrac{n+2}{2\cdot (n+1)}$ and $|h^2|=0$. 
+\qeds
+
+
+
+
+
+
 
 \section{Extrinsic curvature tensor}
 
 Let $\T$ be a vector space with a scalar product, $\T^n$ will denote
 its tensor power of degree $n$, $\S^n(\T)$ and $\Lambda^n(\T)$ will
 denote respectively subspace of symmetric and antisymmetric
-elements of $\T^n$. The scalar product on $\T$ induces a
+elements of $\T^n$.
+The scalar product on $\T$ induces a
 scalar product on $\T^n$ and all its subspaces.
 
 The following subspace of $\T^4$
@@ -353,11 +428,11 @@ In particular, the subspace $\A^4(\T)$ does not depend on the choice of scalar p
 
 \medskip
 
-Let $M\subset\RR^q$ be a smooth submanifold and $s_x\:\S^2(\T_xM)\to \N_x M$ its second fundamental form at $x\in M$;
-here $\T M$ and $\N  M$ are tangent and normal bundles over $M$ respectively.
+Let $L\subset\RR^q$ be a smooth submanifold and $s_x\:\S^2(\T_xL)\to \N_x L$ its second fundamental form at $x\in L$;
+here $\T L$ and $\N  L$ are tangent and normal bundles over $L$ respectively.
 Consider the \emph{extrinsic curvature tensor}
 $$\Phi (X,Y,Z,W)\df \langle s(X,Y),s(Z,W)\rangle,$$
-here $\Phi$ is a section of $\S^2(\S^2(\T M))$.
+here $\Phi$ is a section of $\S^2(\S^2(\T L))$.
 
 Tensor $\Phi$ can be written as
 $$\Phi(X,Y,Z,W)=E(X,Y,Z,W)+\tfrac 1 3\cdot(\Rm(X,Z,Y,W)+\Rm(X,W,Y,Z))
@@ -367,7 +442,7 @@ $$E(X,Y,Z,W)=\tfrac 1 3\cdot
 (\Phi(X,Y,Z,W)+\Phi(Y,Z,X,W)+\Phi(Z,X,Y,W))\in \S^4(\T),$$
 and
 $$\Rm(X,Y,Z,W)=\Phi(X,Z,Y,W)-\Phi(X,W,Y,Z)\in \A^4(\T)$$
-is the Riemannian curvature tensor of $M$.
+is the Riemannian curvature tensor of $L$.
 
 Tensor $E$ represents the \emph{purely extrinsic} part $\Phi$.
 Note that $E\in \S^4(\T)\z\subset\S^2(\S^2(\T))$.
@@ -381,8 +456,8 @@ Therefore in some sense, the $E$-tensor is a higher order analog of the metric t
 
 Observe that 
 \begin{itemize}
- \item The extrinsic curvature tensor $\Phi$ remembers defines the second fundamental form up to action of orthogonal group on $\N$.
- \item The quantities $h^2$, $\zh$ and $\sigma$ in the claim depend linearly on $\Phi$ and they are invariant with respect to the action of orthogonal group on $\T$.
+ \item The extrinsic curvature tensor $\Phi$ remembers the second fundamental form up to action of orthogonal group on $\N$.
+ \item The quantities $|H|^2$, $\zh$ and $\Sc$ in the Gauss formula depend linearly on $\Phi$ and they are invariant with respect to the action of orthogonal group on $\T$.
 \end{itemize}
 
 It follows that passing averaging $\Phi$ along the action of orthogonal groups on $\T$ does not change the quantities in the claim.
@@ -398,54 +473,5 @@ Veronesse immersion gives another example, where direct calculations show that $
 
 
 
-\begin{thm}{Question}
-Suppose $\iota\:\TT^n\to \BB^q$ is a smooth immersion.
-Is it true that $\zh(p)\z\ge 3\cdot \tfrac{n}{n+2}$ at some point $p\in\TT^n$?
-\end{thm}
-
-If true, then for $q\gg n^2\gg1$, the optimal asymptotic lower bound on normal curvatures is $\sqrt{3}$.
-Playing a bit with the formulas below seems to give an asymptotic lower bound $\sqrt{8/3}$; it is quite close to $\sqrt{3}$ and can be improved a bit further, but the optimal bound requires an extra idea.
-
-Below we answer the question in three cases: $n=2$, $n=4$, and if the induced metric is flat.
-Since $2\cdot \tfrac{n-1}{n+2}+1=3\cdot\tfrac{n}{n+2}$, the theorem in the previous section answers the question if the image of $\iota$ lies in the boundary of the ball.
 
 
-
-
-
-
-\begin{thm}{Theorem}
-Suppose $\iota\:\TT^4\to \BB^q$ is a smooth immersion.
-Then $\zh(p)\ge 2$ for some point  $p\in\TT^4$.
-\end{thm}
-
-
-
-
-
-
-
-
-
-\parit{Proof of the theorem.}
-Consider the function $u\:p\mapsto \exp(-|\iota(p)|^2)$.
-
-We will apply the following formula
-\[\Delta(\phi\circ f)=\phi'\cdot \Delta f+\phi''\cdot|\nabla f|^2\]
-to $f\:p\mapsto \tfrac12\cdot |\iota(p)|^2$ and $\phi\:x\mapsto \exp(-2\cdot x)$; so $u=\phi\circ f$.
-
-Let $\alpha=\measuredangle (H,\iota)$, then $\Delta f=4+|H|\cdot |\iota|\cdot \cos\alpha$ and $|\nabla f|\le|\iota|\cdot \sin\alpha$.
-Therefore
-\[ \Delta u\le u\cdot[-2\cdot (4+|H|\cdot |\iota|\cdot \cos\alpha)+(2\cdot|\iota|\cdot \sin\alpha)^2].\]
-Applying the claim for $n=4$, we get that 
-\[\Sc\cdot u-6\cdot \Delta u\]
-returns a negative value at some point $p\in \TT^4$.
-Applying the formula, we get
-\begin{align*}12\cdot \zh(p)
-&\ge
-\tfrac32\cdot [(|H(p)|-4)^2+16].
-\end{align*}
-Whence the statement follows.
-\qeds
-
-\section{Better embeddings into ball}
