@@ -37,18 +37,18 @@ pdfauthor={\theauthors}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
-\title{Normal curvatures of torii}
+\title{Lower bound on normal curvatures of torus}
 \author{Anton Petrunin}
 \date{}
 \maketitle
 
 \begin{abstract}
-We give an optimal lower bound on principal curvatures of immersed $n$-torus in a Euclidean ball of large dimension. 
+We give an optimal lower bound on normal curvatures of immersed $n$-torus in a Euclidean ball of large dimension. 
 \end{abstract}
 
 \section{Introduction}
 
-This note is inspired by examples of isometric embeddings of $n$-torus $\TT^n$ into the unit ball $\BB^q$ of $q$-dimensional Euclidean space for all large $q$ such that all it principal curvatures identically equal to $\sqrt{3\cdot n/(n+2)}$ and the induced metric is flat.
+This note is inspired by examples of isometric embeddings of $n$-torus $\TT^n$ into the unit ball $\BB^q$ of $q$-dimensional Euclidean space for all large $q$ such that all its normal curvatures identically equal to $\sqrt{3\cdot n/(n+2)}$ and the induced metric is flat.
 These examples are geodesic subtorii in  Clifford torii;
 they were constructed by Michael Gromov; see \cite[2.A]{gromov3} and \cite[1.1.A.]{gromov2}. 
 
@@ -57,12 +57,13 @@ The existence of such examples implies the following surprising results:
 \textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$;
 see \cite[1.D]{gromov3} and \cite[1.1.C]{gromov2}.}
 
-The following theorem implies that the bound $\sqrt{3\cdot n/(n+2)}$ is optimal.
+Our theorem implies that the bounds above are optimal.
 
 \begin{thm}{Theorem}
 \label{thm:main}
 Suppose $\TT^n$ is smoothly immersed in $\BB^q$.
-Then its maximal normal curvature is at least $\sqrt{3\cdot n/(n+2)}$.
+Then its maximal normal curvature is at least 
+\[\sqrt{3\cdot \tfrac{n}{n+2}}.\]
 \end{thm}
 
 To make the statement more exact, we need some notations.
@@ -78,7 +79,7 @@ where $\vec v\in \T_x$ and $\gamma_{\vec v}$ an $L$-geodesic that starts at $x$ 
 Given $x\in L$,
 denote by $\zh(x)$ the average value of $|\II(\vec u,\vec u)|^2$ for $\vec u\in\T_x$ such that $|\vec u|=1$;
 in other words, $\zh(x)$ is the average value of squared normal curvatures at $x$.
-(The letter $\zh$ suppose to remind that it is squared $K$.)
+(The letter $\zh$ should resemble squared $K$.)
 
 \begin{thm}{Theorem}
 Suppose $\TT^n$ is smoothly immersed in $\BB^q$.
@@ -113,7 +114,7 @@ The remaining statements \ref{SHORT.strong:2D}--\ref{SHORT.strong:4D} are strong
 All this follows since the normal curvature in some direction at $x$ is at least $\sqrt{\zh(x)}$.
 
 \begin{thm}{Open question}
-Is it true that for any smooth immersion $\TT^n\looparrowright\BB^q$ we have $\zh\ge3\cdot \tfrac{n}{n+2}$ at some point? 
+Is it true that for any smooth immersion $\TT^n\looparrowright\BB^q$ the inequality $\zh\ge3\cdot \tfrac{n}{n+2}$ holds at some point? 
 \end{thm}
 
 
@@ -122,7 +123,7 @@ Is it true that for any smooth immersion $\TT^n\looparrowright\BB^q$ we have $\z
 Recall that $L$ is a smooth $n$-dimensional manifold immersed in $\RR^q$.
 Given $p\in L$,
 denote by $\Sc(p)$ and $H(p)$
-the scalar curvature, the mean curvature vector.
+the scalar curvature, the mean curvature vector at $p$.
 
 The following version of the Gauss formula plays a central role in all proofs;
 it is used instead of the formula in \cite[5.B]{gromov1}.
@@ -145,10 +146,10 @@ n\cdot (n+2)\cdot\zh
 =
 3\cdot \sum_i k_i^2+2\cdot \sum_{i<j} k_i\cdot k_j.
 \]
-The last identity follows since $\zh$ is the average value of $\left(\sum_i k_i\cdot x_i^2\right)^2$ on the unit sphere $\SSS^{n-1}\subset\RR^n$.
+The last identity follows since $\zh$ is the average value of $\left(\sum_i k_i\cdot x_i^2\right)^2$ on the unit sphere $\SSS^{n-1}\subset\RR^n$;
+here $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
 One has to take into account that the following functions have unit average values:
-$\tfrac13\cdot n\cdot (n+2)\cdot x_i^4$ and $n\cdot (n+2)\cdot x_i^2\cdot x_j^2$ for $i\ne j$;
-here we assume that $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
+$\tfrac13\cdot n\cdot (n+2)\cdot x_i^4$ and $n\cdot (n+2)\cdot x_i^2\cdot x_j^2$ for $i\ne j$.
 
 By the standard Gauss formula,
 \[\Sc=2\cdot\sum_{i<j}k_i\cdot k_j.\]
@@ -176,10 +177,11 @@ Hence the general case follows.
 
 \section{Special cases}
 
-Recall that $\TT^n$ is the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles,
-and the unit ball centered at the origin of the $q$-dimensional Euclidean space $\RR^q$ is denoted by $\BB^q$.
+Recall that $\TT^n$ is the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
+Further, $\BB^q$ is the unit ball centered at the origin of the $q$-dimensional Euclidean space $\RR^q$.
 
-The following lemma was essentially proved by István Fáry \cite{fary,tabachnikov}.
+The following statement appears in the book of Yuri Burago and Viktor Zalgaller \cite[Theorem~28.2.5]{burago-zalgaller};
+it generalizes the result of István Fáry about average curvature of a curve in the unit ball \cite{fary,tabachnikov}, but the proof is essentially the same.
 
 \begin{thm}{Lemma}\label{lem:av(H)}
 Let $L$ be a closed $n$-dimension manifold that is smoothly immersed in $\BB^q$.
@@ -187,11 +189,11 @@ Then the average value of $|H|$ on $L$ is at least $n$.
 \end{thm}
 
 \parit{Proof.}
-Consider the function $u\:p\mapsto \tfrac12\cdot |\iota(p)|^2$ on $L$.
-Note that
-\[\Delta u=n+ \langle H,\iota\rangle.\]
-It follows that the average value of $\langle H,\iota\rangle$ is $-n$.
-Since $|\iota|\le1$, we get the result.
+Consider the function $u\:x\mapsto \tfrac12\cdot |x|^2$ on $L$.
+Note that 
+\[(\Delta u)(x)=n+ \langle H(x),x\rangle.\]
+It follows that the average value of $\langle H(x),x\rangle$ is $-n$.
+Since $|x|\le1$, we get the result.
 \qeds
 
 \parit{Proof of \ref{strong:2D}.}
@@ -219,15 +221,11 @@ It tells how we use the assumption in \ref{strong:main} that normal curvatures d
 If $n\le4$, then the proof works without this assumption.
 
 \begin{thm}{Lemma}\label{lem:trivial}
-Let $L$ be a manifold smoothly immersed in $\BB^q$, and its normal curvatures are at most $2$.
+Let $L$ be a manifold smoothly immersed in $\BB^q$.
+Suppose its normal curvatures are at most $2$.
 Given $x\in L$, denote by $\beta$ the angle between vector $x$ and the normal space $\N_x$.
 Then $|x|\le \cos\beta$.
 \end{thm}
-
-\parit{Proof.}
-Let $\xi$ be a tangent direction at $x$ such that $\measuredangle(x,\xi)\z=\tfrac\pi2-\beta$.
-In the plane spanned by $x$ and $\xi$, choose a unit-speed circle arc $\sigma$ from $0$ to $x$ that comes to $x$ in the direction opposite to $\xi$;
-extend $\sigma$ after $x$ by a unit-speed semicircle $\tilde\gamma$ with curvature $2$ in such a way that the concatenation $\sigma*\tilde\gamma$ is is an arc of a smooth convex plane curve; see the figure.
 
 \begin{wrapfigure}{r}{39 mm}
 \vskip-0mm
@@ -235,6 +233,11 @@ extend $\sigma$ after $x$ by a unit-speed semicircle $\tilde\gamma$ with curvatu
 \includegraphics{mppics/pic-10}
 \vskip0mm
 \end{wrapfigure}
+
+\parit{Proof.}
+Let $\xi$ be a tangent direction at $x$ such that $\measuredangle(x,\xi)\z=\tfrac\pi2-\beta$.
+In the plane spanned by $x$ and $\xi$, choose a unit-speed circle arc $\sigma$ from $0$ to $x$ that comes to $x$ in the direction opposite to $\xi$;
+extend $\sigma$ after $x$ by a unit-speed semicircle $\tilde\gamma$ with curvature $2$ in such a way that the concatenation $\sigma*\tilde\gamma$ is an arc of a smooth convex plane curve; see the figure.
 
 Observe that if $|x|> \cos\beta$, then $\tilde\gamma$ leaves $\BB^q$; that is, $|\tilde\gamma(t_0)|>1$ for some $t_0$.
 
@@ -246,11 +249,11 @@ It follows that $L$ does not lie in $\BB^q$ --- a contradiction.
 
 Let $g$ be a Riemannian metric on $\TT^n$.
 Suppose $n\ge 3$, and $u\:\TT^n\to \RR$ is a smooth positive function.
-Here is the well-known formula for the scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$:
-\[\left(\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}};\]
+Recall that
+\[\left(\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}}\]
+is the scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$;
 see for example \cite[6.3]{aubin}.
-Recall that \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Cor. A]{gromov-lawson}.
-Hence we get the following.
+Since \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Cor. A]{gromov-lawson}, we get the following.
 
 \begin{thm}{Claim}\label{clm:sc-lap}
 Let $g$ be a Riemannian metric on $\TT^n$.
@@ -258,11 +261,6 @@ Then, for any positive smooth function $u$ on $\TT^n$, the function
 \[\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\]
 returns a nonpositive value at some point.
 \end{thm}
-
-This claim plays a central role in the following proof.
-
-
-
 
 \parit{Proof of \ref{strong:4D} and \ref{strong:main}.}
 The case $n=2$ follows from \ref{strong:2D};
@@ -273,7 +271,7 @@ We will apply the following formula
 \[\Delta(\phi\circ f)=\phi'\cdot \Delta f+\phi''\cdot|\nabla f|^2\]
 to $f\:x\mapsto \tfrac12\cdot |x|^2$ and $\phi\:y\mapsto \exp(-k\cdot y)$; so $u=\phi\circ f$.
 
-Set $r(x)=|x|$, $\alpha(x)=\measuredangle (H(x),x)$ and $\beta(x)$ as in \ref{lem:trivial}.
+Set $r(x)=|x|$, $\alpha(x)=\measuredangle (H(x),x)$, and $\beta(x)$ as in \ref{lem:trivial}.
 Note that 
 \[\beta\le \alpha\le \pi-\beta.
 \eqlbl{eq:beta=<alpha}\]
@@ -338,6 +336,12 @@ If $n\ge 5$, then for the last inequality in \ref{eq:main}
 we need to use in addition that $r^2+\sin^2\beta\le 1$ which follows \ref{lem:trivial}.
 Hence \ref{strong:main} follows.
 \qeds
+
+\parbf{Acknowledgments.}
+I want to thank Michael Gromov for help and encouragement.
+The work done at Euler International Mathematical Institute of PDMI RAS;
+it was partially supported by the National Science Foundation, grant DMS-2005279
+and the Ministry of Education and Science of the Russian Federation, grant 075-15-2022-289.
 
 
 {\sloppy
