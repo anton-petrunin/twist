@@ -38,10 +38,10 @@ z.ss=2*z.x;
 z.s=z.x+(unitvector(z.x-z.b) zscaled (0,-1))*u;
 
 draw p1 pensemibold;
-draw z.o--z.x;
+draw z.o--z.x dashed evenly;
 drawarrow z.x--z.s;
 
-draw circle(z.o,1*u) dashed evenly;
+draw circle(z.o,1*u);
 
 labelarcsprof(z.ss, z.x, z.s, 10, 28, btex {\small $\tfrac\pi2-\beta$} etex);
 label.lft(btex $0$ etex, z.o);

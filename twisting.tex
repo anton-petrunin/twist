@@ -54,8 +54,8 @@ they were constructed by Michael Gromov; see \cite[2.A]{gromov3} and \cite[1.1.A
 
 The existence of such examples implies the following surprising results:
 \textit{any closed smooth manifold admits a smooth embedding into $\BB^q$ for large $q$ with normal curvatures less than $\sqrt{3}$.}
-\textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$;
-see \cite[1.D]{gromov3} and \cite[1.1.C]{gromov2}.}
+\textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$;}
+see \cite[1.D]{gromov3} and \cite[1.1.C]{gromov2}.
 
 Our theorem implies that the bounds above are optimal.
 
@@ -112,6 +112,10 @@ If the normal curvatures of $\TT^n$ do not exceed $2$, then $\zh\ge 3\cdot \tfra
 Note that part \ref{SHORT.strong:main} is a stronger version of \ref{thm:main}.
 The remaining statements \ref{SHORT.strong:2D}--\ref{SHORT.strong:4D} are stronger versions of \ref{thm:main} in some partial cases.
 All this follows since the normal curvature in some direction at $x$ is at least $\sqrt{\zh(x)}$.
+
+All proofs  use our version of the Gauss formula; see below.
+The proofs of \ref{SHORT.strong:sphere}--\ref{SHORT.strong:main} use in addition that 
+\textit{torus does not admit a metric with positive scalar curvature} \cite[Corollary A]{gromov-lawson}.
 
 \begin{thm}{Open question}
 Is it true that for any smooth immersion $\TT^n\looparrowright\BB^q$ the inequality $\zh\ge3\cdot \tfrac{n}{n+2}$ holds at some point? 
@@ -215,14 +219,14 @@ Since $\Sc\equiv0$, it remains to apply \ref{formula:gauss}.
 
 \parit{Proof of \ref{strong:sphere}.} 
 Since the image lies in the unit sphere, we have that $|H|^2$ is at least $n^2$ at each point.
-Since $\TT^n$ does not admit a metric with positive scalar curvature \cite[Cor. A]{gromov-lawson}, we have $\Sc(x)\le 0$ at some point $x$.
+Since $\TT^n$ does not admit a metric with positive scalar curvature \cite[Corollary A]{gromov-lawson}, we have $\Sc(x)\le 0$ at some point $x$.
 It remains to apply \ref{formula:gauss} at $x$.
 \qeds
 
 \section{Main case}
 
 The following lemma is an easy corollary of the bow lemma of Axel Schur \cite{shur,petrunin-zamora}.
-It tells how we use the assumption in \ref{strong:main} that normal curvatures do not exceed~$2$.
+It tells how we use the bound on normal curvatures in \ref{strong:main}.
 If $n\le4$, then the proof works without this assumption.
 
 \begin{thm}{Lemma}\label{lem:trivial}
@@ -233,7 +237,7 @@ Then $|x|\le \cos\beta$.
 \end{thm}
 
 \begin{wrapfigure}{r}{39 mm}
-\vskip-0mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-10}
 \vskip0mm
@@ -258,7 +262,7 @@ Recall that
 \[\left(\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}}\]
 is the scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$;
 see for example \cite[6.3]{aubin}.
-Since \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Cor. A]{gromov-lawson}, we get the following.
+Since \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Corollary A]{gromov-lawson}, we get the following.
 
 \begin{thm}{Claim}\label{clm:sc-lap}
 Let $g$ be a Riemannian metric on $\TT^n$.
@@ -304,14 +308,13 @@ Recall that
 $\Sc=-\tfrac{n\cdot (n+2)}{2}\cdot\zh+\tfrac32\cdot |H|^2$; see \ref{formula:gauss}.
 By \ref{clm:sc-lap}, the function
 \begin{align*}
-&\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}\cdot \Delta u= 
-\\
-&\quad=u\cdot\biggl[
+\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}\cdot \Delta u
+&=u\cdot\biggl[
 -\tfrac{n\cdot (n+2)}{2}\cdot\zh
 +\tfrac32\cdot |H|^2
 +4{\cdot}\tfrac{n-1}{n-2}\cdot k\cdot|H|\cdot r\cdot \cos\alpha+
 \\
-&\qquad+4{\cdot}\tfrac{n-1}{n-2}\cdot(k\cdot n-k^2\cdot r^2\cdot \sin^2\beta)\biggr]
+&\qquad\qquad\qquad\qquad\qquad\qquad+4{\cdot}\tfrac{n-1}{n-2}\cdot(k\cdot n-k^2\cdot r^2\cdot \sin^2\beta)\biggr]
 \end{align*}
 returns a nonpositive value at some point $x\in \TT^n$.
 
@@ -326,10 +329,8 @@ At the point $x$, we have
 &\ge \tfrac32\cdot(|H|+n\cdot r\cdot \cos\alpha)^2
 -\tfrac32\cdot n^2\cdot r^2\cdot \cos^2\alpha+
 \\
-&\qquad+3\cdot n^2
--\tfrac94\cdot\tfrac{n-2}{n-1}\cdot n^2\cdot r^2\cdot \sin^2\beta\ge
-\\
-&\ge\tfrac32\cdot n^2.
+&\qquad\qquad\qquad\quad+3\cdot n^2
+-\tfrac94\cdot\tfrac{n-2}{n-1}\cdot n^2\cdot r^2\cdot \sin^2\beta\ge\tfrac32\cdot n^2.
 \end{aligned}
 \eqlbl{eq:main}
 \]
@@ -344,7 +345,7 @@ Hence \ref{strong:main} follows.
 
 \parbf{Acknowledgments.}
 I want to thank Michael Gromov for help and encouragement.
-The work done at Euler International Mathematical Institute of PDMI RAS;
+This work was done at Euler International Mathematical Institute of PDMI RAS;
 it was partially supported by the National Science Foundation, grant DMS-2005279
 and the Ministry of Education and Science of the Russian Federation, grant 075-15-2022-289.
 
@@ -355,132 +356,3 @@ and the Ministry of Education and Science of the Russian Federation, grant 075-1
 }
 
 \end{document}
-
-
-
-\parit{Proof.}
-Choose a point $x$ on the manifold, say $L$.
-Further we will identify $\T_x$ and $\T_x^*$ using the Riemannian metric.
-Let us denote by $\T_x^n$ the $n^{\text{th}}$ tensor power of $\T_x$.
-Denote by $\S^n(\T_x)$ and $\Lambda^n(\T_x)$ respectively subspace of symmetric and antisymmetric
-elements of $\T_x^n$.
-
-Let $\II$ be the second fundamental form at $x$.
-Consider the \emph{extrinsic curvature tensor}
-$$\Phi (X,Y,Z,W)\df \langle \II(X,Y),\II(Z,W)\rangle.$$
-Note that $\Phi\in\S^2(\S^2(\T_x))$.
-Observe that $\Phi$ remembers the $\II$ up to rotation of $\N_x$.
-Further, $|H|^2$, $\zh$ and $\Sc$ in the Gauss formula depend linearly on $\Phi$ and they are invariant with respect to the action of orthogonal group on $\T_x$.
-Therefore we can assume that $\Phi$ is symmetric with respect to the $\mathrm{O}(n)$-action on $\T_x$
-
-Tensor $\Phi$ can be written as
-$$\Phi(X,Y,Z,W)=E(X,Y,Z,W)+\tfrac 1 3\cdot(\Rm(X,Z,Y,W)+\Rm(X,W,Y,Z))
-\eqno(*)$$ 
-where $E$ is the total symmetrization of $\Phi$; that is,
-$$E(X,Y,Z,W)=\tfrac 1 3\cdot
-(\Phi(X,Y,Z,W)+\Phi(Y,Z,X,W)+\Phi(Z,X,Y,W))\in \S^4(\T_x),$$
-and
-$$\Rm(X,Y,Z,W)=\Phi(X,Z,Y,W)-\Phi(X,W,Y,Z)$$
-is the Riemannian curvature tensor of $L$.
-
-Since $\Phi$ is invariant with respect to the $\mathrm{O}(n)$-action on $\T_x$,
-$\Rm$ and $E$ are symmetric as well.
-Therefore $\Rm$ is completely determined by $\Sc$ and $E$ is determined by $\zh$;
-in fact $E(X,X,X,X)\equiv\zh\cdot|X|^4$.
-
-
-Tensor $E$ represents the \emph{purely extrinsic} part $\Phi$.
-In some sense, $E$ is a higher order analog of the metric tensor.
-It measures wrinkling of the embedding --- the more it is wrinkled the bigger $E$ gets.
-Note that
-\[E(X,X,X,X)=|\II(X,X)|^2\]
-is homogeneous polynomial of degree $4$ on $\T_x$ 
-and it describes $E$ completely.
-
-
-
-
-
-It follows that passing averaging $\Phi$ along the action of orthogonal groups on $\T_x$ does not change the quantities in the claim.
-In particular, we can assume that both $\Rm$ and $E$ are invariant with respecct to orthogonal group.
-It follows that $\Rm$ has constant sectional curvature, say $\sigma$ and $E(\vec x,\vec x,\vec x,\vec x)=\zh\cdot |\vec x|^4$ for some $\zh$.
-Since $\Phi$ can be expressed linearly from $\Rm$ and $E$, it completely described by two parameters --- $\sigma$ and $\zh$.
-Therefore it is sufficient to check the formula for two symmetric embedding with linear independent pairs $\sigma,\zh$.
-One such embedding is standard embedding of sphere; in this case we have $\sigma=\zh=|h|^2=1$.
-Veronesse immersion gives another example, where direct calculations show that $\zh=\tfrac{n-1}{n+1}$, $\sigma=-\tfrac{n+2}{2\cdot (n+1)}$ and $|h^2|=0$. 
-\qeds
-
-
-
-
-
-
-
-\section{Extrinsic curvature tensor}
-
-Let $\T$ be a vector space with a scalar product, $\T^n$ will denote
-its tensor power of degree $n$, $\S^n(\T)$ and $\Lambda^n(\T)$ will
-denote respectively subspace of symmetric and antisymmetric
-elements of $\T^n$.
-The scalar product on $\T$ induces a
-scalar product on $\T^n$ and all its subspaces.
-
-The following subspace of $\T^4$
-$$\A^4(\T)=\Lambda^4(\T)^\bot\cap \S^2(\Lambda^2(\T))$$
-is formed by all possible curvature tensors
-on the tangent space $\T$.
-In an equivalent way this subspace $\A^4\subset\S^2(\Lambda^2(\T))$
-can be described  as the space of all tensors in $\S^2(\Lambda^2(\T))$
-satisfying the first Bianchi identity
-$$\Rm(X,Y,Z,W)+\Rm(Y,Z,X,W)+\Rm(Z,X,Y,W)=0.$$
-In particular, the subspace $\A^4(\T)$ does not depend on the choice of scalar product on $\T$.
-
-\medskip
-
-Let $L\subset\RR^q$ be a smooth submanifold and $s_x\:\S^2(\T_xL)\to \N_x L$ its second fundamental form at $x\in L$;
-here $\T L$ and $\N  L$ are tangent and normal bundles over $L$ respectively.
-Consider the \emph{extrinsic curvature tensor}
-$$\Phi (X,Y,Z,W)\df \langle s(X,Y),s(Z,W)\rangle,$$
-here $\Phi$ is a section of $\S^2(\S^2(\T L))$.
-
-Tensor $\Phi$ can be written as
-$$\Phi(X,Y,Z,W)=E(X,Y,Z,W)+\tfrac 1 3\cdot(\Rm(X,Z,Y,W)+\Rm(X,W,Y,Z))
-\eqno(*)$$ 
-where $E$ is the total symmetrization of $\Phi$; that is,
-$$E(X,Y,Z,W)=\tfrac 1 3\cdot
-(\Phi(X,Y,Z,W)+\Phi(Y,Z,X,W)+\Phi(Z,X,Y,W))\in \S^4(\T),$$
-and
-$$\Rm(X,Y,Z,W)=\Phi(X,Z,Y,W)-\Phi(X,W,Y,Z)\in \A^4(\T)$$
-is the Riemannian curvature tensor of $L$.
-
-Tensor $E$ represents the \emph{purely extrinsic} part $\Phi$.
-Note that $E\in \S^4(\T)\z\subset\S^2(\S^2(\T))$.
-Tensor $E$ measures wrinkling of the embedding --- the more it is wrinkled the bigger $E$ gets.
-Note that
-$f(X)=E(X,X,X,X)=|s(X,X)|^2$
-is homogeneous polynomial of degree $4$ on $\T$ 
-and it describes $E$ completely.
-Therefore in some sense, the $E$-tensor is a higher order analog of the metric tensor.
-
-
-Observe that 
-\begin{itemize}
- \item The extrinsic curvature tensor $\Phi$ remembers the second fundamental form up to action of orthogonal group on $\N$.
- \item The quantities $|H|^2$, $\zh$ and $\Sc$ in the Gauss formula depend linearly on $\Phi$ and they are invariant with respect to the action of orthogonal group on $\T$.
-\end{itemize}
-
-It follows that passing averaging $\Phi$ along the action of orthogonal groups on $\T$ does not change the quantities in the claim.
-In particular, we can assume that both $\Rm$ and $E$ are invariant with respecct to orthogonal group.
-It follows that $\Rm$ has constant sectional curvature, say $\sigma$ and $E(\vec x,\vec x,\vec x,\vec x)=\zh\cdot |\vec x|^4$ for some $\zh$.
-Since $\Phi$ can be expressed linearly from $\Rm$ and $E$, it completely described by two parameters --- $\sigma$ and $\zh$.
-Therefore it is sufficient to check the formula for two symmetric embedding with linear independent pairs $\sigma,\zh$.
-One such embedding is standard embedding of sphere; in this case we have $\sigma=\zh=|h|^2=1$.
-Veronesse immersion gives another example, where direct calculations show that $\zh=\tfrac{n-1}{n+1}$, $\sigma=-\tfrac{n+2}{2\cdot (n+1)}$ and $|h^2|=0$. 
-
-
-
-
-
-
-
-
