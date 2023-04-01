@@ -8,8 +8,8 @@
 %\usepackage[notref,notcite,color]{showkeys}
 
 
-\def\thetitle{Twistings}
-\def\theauthors{}
+\def\thetitle{Gromov's torii are optimal}
+\def\theauthors{Anton Petrunin}
 
 \hypersetup{colorlinks=true,
 citecolor=black,
@@ -37,8 +37,10 @@ pdfauthor={\theauthors}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
-\title{Lower bound on normal curvatures of torus}
-\author{Anton Petrunin}
+\title{\thetitle
+%Lower bound on normal curvatures of torus
+}
+\author{\theauthors}
 \date{}
 \maketitle
 
@@ -48,16 +50,20 @@ We give an optimal lower bound on normal curvatures of immersed $n$-torus in a E
 
 \section{Introduction}
 
-This note is inspired by examples of isometric embeddings of $n$-torus $\TT^n$ into the unit ball $\BB^q$ of $q$-dimensional Euclidean space for all large $q$ such that all its normal curvatures identically equal to $\sqrt{3\cdot n/(n+2)}$ and the induced metric is flat.
-These examples are geodesic subtorii in  Clifford torii;
+Let us denote by $\BB^q$ the unit ball in $\RR^q$ centered at the origin.
+Further, $\TT^n$ will denote the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
+
+This note is inspired by examples of embeddings $\TT^n\hookrightarrow\BB^q$ for large $q$ with constant normal curvatures $K_n=\sqrt{3\cdot n/(n+2)}$.
+In other words, any geodesic in the torus has constant curvature $K_n$ as a curve in $\RR^q$.
+These examples are found among geodesic subtorii in Clifford's torii;
 they were constructed by Michael Gromov; see \cite[2.A]{gromov3} and \cite[1.1.A.]{gromov2}. 
 
-The existence of such examples implies the following surprising results:
+The existence of such torii implies the following surprising results:
 \textit{any closed smooth manifold admits a smooth embedding into $\BB^q$ for large $q$ with normal curvatures less than $\sqrt{3}$.}
 \textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$;}
 see \cite[1.D]{gromov3} and \cite[1.1.C]{gromov2}.
 
-Our theorem implies that the bounds above are optimal.
+The next theorem implies that Gromov's torii have the best upper bound on normal curvatures; in particular the $\sqrt3$-bound is optimal.
 
 \begin{thm}{Theorem}
 \label{thm:main}
@@ -66,20 +72,22 @@ Then its maximal normal curvature is at least
 \[\sqrt{3\cdot \tfrac{n}{n+2}}.\]
 \end{thm}
 
-To make the statement more exact, we need some notations.
-Assume that a smooth $n$-dimensional manifold $L$ is immersed in the Euclidean space $\RR^q$;
+To make the statement more exact, we need one more notation.
+Assume that $L$ is
+a smooth $n$-dimensional manifold immersed in $\RR^q$;
 we will always assume that $L$ is equipped with induced Riemannian metric.
 Let us denote by $\T_x$ and $\N_x$ the tangent and normal spaces of $L$ at~$x$.
 
 Recall that \emph{second fundamental form} $\II$ at $x$ is a symmetric quadratic form on $\T_x$ with values in $\N_x$.
 It is uniquely defined by the following identity
 \[\II(\vec v,\vec v)\equiv \gamma''_{\vec v}(0),\]
-where $\vec v\in \T_x$ and $\gamma_{\vec v}$ an $L$-geodesic that starts at $x$ with initial velocity vector~$\vec v$.
+where $\vec v\in \T_x$ and $\gamma_{\vec v}$ is an $L$-geodesic that starts at $x$ with initial velocity vector~$\vec v$.
 
 Given $x\in L$,
-denote by $\zh(x)$ the average value of $|\II(\vec u,\vec u)|^2$ for $\vec u\in\T_x$ such that $|\vec u|=1$;
-in other words, $\zh(x)$ is the average value of squared normal curvatures at $x$.
-(The letter $\zh$ should resemble squared $K$.)
+denote by $\zh(x)$ the average value of $|\II(\vec u,\vec u)|^2$ for $\vec u\in\T_x$ such that $|\vec u|=1$.
+In other words, if $K(\vec u)$ denotes normal curvature in the direction $\vec u$, then
+$\zh(x)$ is the average value $K^2(\vec u)$.
+(The cyrillic zhe $\zh$ is used since it resembles squared $K$.)
 
 \begin{thm}{Theorem}
 Suppose $\TT^n$ is smoothly immersed in $\BB^q$.
@@ -96,7 +104,7 @@ If the metric on $\TT^n$ is flat, then the average value of $\zh$ is at least $3
 \end{subthm}
 
 \begin{subthm}{strong:sphere}
-If the image of $\TT^n$ lies in $\SSS^{q-1}=\partial\BB^q$, then  $\zh\ge 3\cdot \tfrac{n}{n+2}$ at some point.
+If the image of $\TT^n$ lies in $\partial\BB^q$, then  $\zh\ge 3\cdot \tfrac{n}{n+2}$ at some point of $\TT^n$.
 \end{subthm}
 
 \begin{subthm}{strong:4D}
@@ -150,8 +158,8 @@ n\cdot (n+2)\cdot\zh
 =
 3\cdot \sum_i k_i^2+2\cdot \sum_{i<j} k_i\cdot k_j.
 \]
-The last identity follows since $\zh$ is the average value of $\left(\sum_i k_i\cdot x_i^2\right)^2$ on the unit sphere $\SSS^{n-1}\subset\RR^n$;
-here $(x_1,\dots,x_n)$ are the standard coordinates in $\RR^n$.
+The last identity follows since $\zh$ is the average value of $\left(\sum_i k_i\cdot x_i^2\right)^2$ on the unit sphere $\SSS^{n-1}\subset\RR^n=\T_p$;
+here $(x_1,\dots,x_n)$ are the standard coordinates in~$\RR^n$.
 One has to take into account that the following functions have unit average values:
 $\tfrac13\cdot n\cdot (n+2)\cdot x_i^4$ and $n\cdot (n+2)\cdot x_i^2\cdot x_j^2$ for $i\ne j$.
 
@@ -180,14 +188,12 @@ Hence the general case follows.
 \qeds
 
 \parit{Remark.}
-A more direct proof of this formula can be obtained using the so called \emph{extrinsic curvature tensor} that is defined by
+A more direct proof of this formula can be obtained using the so-called \emph{extrinsic curvature tensor} which is defined by
 $\Phi(\vec x,\vec y,\vec v,\vec w)\df\langle\II(\vec x,\vec y),\II(\vec v,\vec w)\rangle$;
 the necessary properties of this tensor are discussed in \cite{petrunin}.
+As a bonus, one gets explicit expression for the second fundamental forms of all Gromov's torii.
 
 \section{Special cases}
-
-Recall that $\TT^n$ is the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
-Further, $\BB^q$ is the unit ball centered at the origin of the $q$-dimensional Euclidean space $\RR^q$.
 
 The following statement appears in the book of Yuri Burago and Viktor Zalgaller \cite[Theorem~28.2.5]{burago-zalgaller};
 it generalizes the result of István Fáry about average curvature of a curve in the unit ball \cite{fary,tabachnikov}, but the proof is essentially the same.
@@ -232,12 +238,12 @@ If $n\le4$, then the proof works without this assumption.
 \begin{thm}{Lemma}\label{lem:trivial}
 Let $L$ be a manifold smoothly immersed in $\BB^q$.
 Suppose its normal curvatures are at most $2$.
-Given $x\in L$, denote by $\beta$ the angle between vector $x$ and the normal space $\N_x$.
+Given $x\in L$, denote by $\beta=\beta(x)$ the angle between vector $x$ and the normal space $\N_x$.
 Then $|x|\le \cos\beta$.
 \end{thm}
 
 \begin{wrapfigure}{r}{39 mm}
-\vskip-8mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-10}
 \vskip0mm
@@ -245,7 +251,7 @@ Then $|x|\le \cos\beta$.
 
 \parit{Proof.}
 Let $\xi$ be a tangent direction at $x$ such that $\measuredangle(x,\xi)\z=\tfrac\pi2-\beta$.
-In the plane spanned by $x$ and $\xi$, choose a unit-speed circle arc $\sigma$ from $0$ to $x$ that comes to $x$ in the direction opposite to $\xi$;
+In the plane spanned by $x$ and~$\xi$, choose a unit-speed circle arc $\sigma$ from $0$ to $x$ that comes to $x$ in the direction opposite to $\xi$;
 extend $\sigma$ after $x$ by a unit-speed semicircle $\tilde\gamma$ with curvature $2$ in such a way that the concatenation $\sigma*\tilde\gamma$ is an arc of a smooth convex plane curve; see the figure.
 
 Observe that if $|x|> \cos\beta$, then $\tilde\gamma$ leaves $\BB^q$; that is, $|\tilde\gamma(t_0)|>1$ for some $t_0$.
@@ -262,11 +268,11 @@ Recall that
 \[\left(\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}}\]
 is the scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$;
 see for example \cite[6.3]{aubin}.
-Since \emph{any Riemannian metric $g$ on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Corollary A]{gromov-lawson}, we get the following.
+Since \emph{any Riemannian metric on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Corollary A]{gromov-lawson}, we get the following.
 
 \begin{thm}{Claim}\label{clm:sc-lap}
-Let $g$ be a Riemannian metric on $\TT^n$.
-Then, for any positive smooth function $u$ on $\TT^n$, the function 
+For any Riemannian metric on $\TT^n$
+and any positive smooth function $u\:\TT^n\to\RR$, the function 
 \[\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\]
 returns a nonpositive value at some point.
 \end{thm}
@@ -334,11 +340,14 @@ At the point $x$, we have
 \end{aligned}
 \eqlbl{eq:main}
 \]
-By \ref{eq:beta=<alpha}, $\cos^2\beta\z+\sin^2\alpha\le 1$.
+
+Indeed,
+by \ref{eq:beta=<alpha},
+$\cos^2\alpha+\sin^2\beta\z\le 1$.
 If $n\le 4$, then  $\tfrac32\ge \tfrac94\cdot\tfrac{n-2}{n-1}$;
 therefore the last inequality follows, and it proves \ref{strong:4D}.
 
-If $n\ge 5$, then for the last inequality in \ref{eq:main}
+Further, if $n\ge 5$, then for the last inequality in \ref{eq:main}
 we need to use in addition that $r^2+\sin^2\beta\le 1$ which follows \ref{lem:trivial}.
 Hence \ref{strong:main} follows.
 \qeds
