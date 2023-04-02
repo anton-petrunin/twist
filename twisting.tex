@@ -37,9 +37,7 @@ pdfauthor={\theauthors}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
-\title{\thetitle
-%Lower bound on normal curvatures of torus
-}
+\title{\thetitle}
 \author{\theauthors}
 \date{}
 \maketitle
@@ -55,15 +53,20 @@ Further, $\TT^n$ will denote the $n$-dimensional torus --- the smooth manifold d
 
 This note is inspired by examples of embeddings $\TT^n\hookrightarrow\BB^q$ for large $q$ with constant normal curvatures $K_n=\sqrt{3\cdot n/(n+2)}$.
 In other words, any geodesic in the torus has constant curvature $K_n$ as a curve in $\RR^q$.
-These examples are found among geodesic subtorii in Clifford's torii;
-they were constructed by Michael Gromov; see \cite[2.A]{gromov3} and \cite[1.1.A.]{gromov2}. 
+These examples were found by Michael Gromov among geodesic subtorii in Clifford's torii 
+\cite[2.A]{gromov3}, \cite[1.1.A.]{gromov2}.
+In particular, Gromov's torii have flat induced metric.
+(Recall that Clifford's torus is a product of $m$  circles of radius ${1}/{\sqrt{m}}$ in $\RR^{2\cdot m}$;
+its normal curvatures lie in the range $[1,\sqrt{m}]$.)
 
-The existence of such torii implies the following surprising results:
-\textit{any closed smooth manifold admits a smooth embedding into $\BB^q$ for large $q$ with normal curvatures less than $\sqrt{3}$.}
-\textit{Moreover, the induced Riemannian metric can be chosen to be proportional to any given metric $g$;}
+
+Gromov's examples lead to the following surprising facts:
+\textit{any closed smooth manifold $L$ admits a smooth embedding into $\BB^q$ for large $q$ with normal curvatures less than $\sqrt{3}$;}
+\textit{moreover, the induced Riemannian metric on $L$ can be chosen to be proportional to any given metric $g$;}
 see \cite[1.D]{gromov3} and \cite[1.1.C]{gromov2}.
 
-The next theorem implies that Gromov's torii have the best upper bound on normal curvatures; in particular the $\sqrt3$-bound is optimal.
+The next theorem implies that Gromov's torii have the best upper bound on normal curvatures;
+in particular, the $\sqrt3$-bound is optimal.
 
 \begin{thm}{Theorem}
 \label{thm:main}
@@ -79,15 +82,15 @@ we will always assume that $L$ is equipped with induced Riemannian metric.
 Let us denote by $\T_x$ and $\N_x$ the tangent and normal spaces of $L$ at~$x$.
 
 Recall that \emph{second fundamental form} $\II$ at $x$ is a symmetric quadratic form on $\T_x$ with values in $\N_x$.
-It is uniquely defined by the following identity
-\[\II(\vec v,\vec v)\equiv \gamma''_{\vec v}(0),\]
+It is uniquely defined by the identity $\II(\vec v,\vec v)\equiv \gamma''_{\vec v}(0)$,
 where $\vec v\in \T_x$ and $\gamma_{\vec v}$ is an $L$-geodesic that starts at $x$ with initial velocity vector~$\vec v$.
 
 Given $x\in L$,
 denote by $\zh(x)$ the average value of $|\II(\vec u,\vec u)|^2$ for $\vec u\in\T_x$ such that $|\vec u|=1$.
-In other words, if $K(\vec u)$ denotes normal curvature in the direction $\vec u$, then
+Since $K(\vec u)=|\II(\vec u,\vec u)|$ is the normal curvature in the direction $\vec u$,
+we have that
 $\zh(x)$ is the average value $K^2(\vec u)$.
-(The cyrillic zhe $\zh$ is used since it resembles squared $K$.)
+(The Cyrillic zhe $\zh$ is used since it resembles squared $K$.)
 
 \begin{thm}{Theorem}
 Suppose $\TT^n$ is smoothly immersed in $\BB^q$.
@@ -355,7 +358,7 @@ Hence \ref{strong:main} follows.
 \parbf{Acknowledgments.}
 I want to thank Michael Gromov and Nina Lebedeva for help and encouragement.
 This work was done at Euler International Mathematical Institute of PDMI RAS;
-it was partially supported by the National Science Foundation, grant DMS-2005279
+it was partially supported by the National Science Foundation, grant DMS-2005279,
 and the Ministry of Education and Science of the Russian Federation, grant 075-15-2022-289.
 
 
