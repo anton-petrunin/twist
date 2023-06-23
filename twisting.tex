@@ -48,7 +48,7 @@ We give an optimal bound on normal curvatures of immersed $n$-torus in a Euclide
 
 \section{Introduction}
 
-Let us denote by $\BB^q$ the unit ball in $\RR^q$ centered at the origin.
+Let us denote by $\BB^q$ the closed unit ball in $\RR^q$ centered at the origin.
 Further, $\TT^n$ will denote the $n$-dimensional torus --- the smooth manifold diffeomorphic to the product of $n$ circles.
 
 This note is inspired by examples of embeddings $\TT^n\hookrightarrow\BB^q$ for large $q$ with constant normal curvatures $K_n=\sqrt{3\cdot n/(n+2)}$.
@@ -57,7 +57,7 @@ These examples were found by Michael Gromov among geodesic subtorii in Clifford'
 \cite[2.A]{gromov3}, \cite[1.1.A.]{gromov2}.
 In particular, Gromov's torii have flat induced metric.
 (Recall that Clifford's torus is a product of $m$  circles of radius ${1}/{\sqrt{m}}$ in $\RR^{2\cdot m}$;
-its normal curvatures lie in the range $[1,\sqrt{m}]$.)
+its normal curvatures lie in the range $[\,1,\sqrt{m}\,]$.)
 
 
 Gromov's examples lead to the following surprising facts:
@@ -90,7 +90,7 @@ denote by $\zh(x)$ the average value of $|\II(\vec u,\vec u)|^2$ for $\vec u\in\
 Since $K(\vec u)=|\II(\vec u,\vec u)|$ is the normal curvature in the direction $\vec u$,
 we have that
 $\zh(x)$ is the average value $K^2(\vec u)$.
-(The Cyrillic zhe $\zh$ is used since it resembles squared $K$.)
+(The Cyrillic zhe $\zh$ is used since it resembles $K^2$.)
 
 \begin{thm}{Theorem}
 Suppose $\TT^n$ is smoothly immersed in $\BB^q$.
@@ -132,6 +132,15 @@ The proofs of \ref{SHORT.strong:sphere}--\ref{SHORT.strong:main} use in addition
 Is it true that for any smooth immersion $\TT^n\looparrowright\BB^q$ the inequality $\zh\ge3\cdot \tfrac{n}{n+2}$ holds at some point? 
 \end{thm}
 
+\begin{thm}{Open question}
+Suppose $\RP^n\looparrowright\BB^q$ is a smooth immersion.
+Is it true that its normal curvature is at least $\sqrt{2\cdot n/(n+1)}$ in  some direction? 
+\end{thm}
+
+The last question asks if \textit{the Veronese embedding is optimal}.
+Recall that the Veronese embedding $\RP^n\hookrightarrow\BB^q$ has all normal curvatures $\sqrt{2\cdot n/(n+1)}$; here $q= \tfrac12\cdot(n+1)(n+2)$.
+An analogous question for immersions into unit spheres is open as well \cite{445819}.
+You may also ask for the optimal constant for your favorite closed manifold.
 
 \section{Gauss formula}
 
@@ -150,9 +159,10 @@ holds for any smooth $n$-dimensional immersed manifold in a Euclidean space.
 \end{thm}
 
 \parit{Proof.}
+Choose a point $p\in L$.
+
 Assume $\codim L=1$.
-Choose $p\in L$;
-denote by $k_1,\dots,k_n$ the principal curvatures of $L$ at $p$.
+Denote by $k_1,\dots,k_n$ the principal curvatures of $L$ at $p$.
 Note that
 \[|H|^2= \sum_ik_i^2+2\cdot\sum_{i<j}k_i\cdot k_j.\]
 Further, 
@@ -170,7 +180,7 @@ By the standard Gauss formula,
 \[\Sc=2\cdot\sum_{i<j}k_i\cdot k_j.\]
 It remains to rewrite the right-hand side using the expressions for $|H|^2$ and $\zh$.
 
-If $\codim L =k>1$, then the second fundamental form can be presented as a direct sum of $k$ real-valued quadratic forms $\II_1\oplus\dots\oplus \II_k$;
+If $\codim L =k>1$, then the second fundamental form at $p$ can be presented as a direct sum of $k$ real-valued quadratic forms $\II_1\oplus\dots\oplus \II_k$;
 that is,
 \[\II=e_1\cdot\II_1+\dots+e_k\cdot \II_k,\]
 where $e_1,\dots, e_k$ is an orthonormal basis of $\N_p$.
@@ -194,7 +204,7 @@ Hence the general case follows.
 A more direct proof of this formula can be obtained using the so-called \emph{extrinsic curvature tensor} which is defined by
 $\Phi(\vec x,\vec y,\vec v,\vec w)\df\langle\II(\vec x,\vec y),\II(\vec v,\vec w)\rangle$;
 the necessary properties of this tensor are discussed in \cite{petrunin}.
-As a bonus, one gets explicit expression for the second fundamental forms of all Gromov's torii.
+As a bonus, one gets an explicit expression for the second fundamental forms of all Gromov's torii.
 
 \section{Special cases}
 
@@ -255,7 +265,7 @@ Then $|x|\le \cos\beta$.
 \parit{Proof.}
 Let $\xi$ be a tangent direction at $x$ such that $\measuredangle(x,\xi)\z=\tfrac\pi2-\beta$.
 In the plane spanned by $x$ and~$\xi$, choose a unit-speed circle arc $\sigma$ from $0$ to $x$ that comes to $x$ in the direction opposite to $\xi$;
-extend $\sigma$ after $x$ by a unit-speed semicircle $\tilde\gamma$ with curvature $2$ in such a way that the concatenation $\sigma*\tilde\gamma$ is an arc of a smooth convex plane curve; see the figure.
+extend $\sigma$ after $x$ by a unit-speed semicircle $\tilde\gamma$ with curvature $2$ in such a way that the concatenation $\sigma*\tilde\gamma$ is an arc of a $C^1$-smooth convex plane curve; see the figure.
 
 Observe that if $|x|> \cos\beta$, then $\tilde\gamma$ leaves $\BB^q$; that is, $|\tilde\gamma(t_0)|>1$ for some $t_0$.
 
@@ -351,7 +361,7 @@ If $n\le 4$, then  $\tfrac32\ge \tfrac94\cdot\tfrac{n-2}{n-1}$;
 therefore the last inequality follows, and it proves \ref{strong:4D}.
 
 Further, if $n\ge 5$, then for the last inequality in \ref{eq:main}
-we need to use in addition that $r^2+\sin^2\beta\le 1$ which follows \ref{lem:trivial}.
+we need to use in addition that $r^2+\sin^2\beta\le 1$ which follows from \ref{lem:trivial}.
 Hence \ref{strong:main} follows.
 \qeds
 
