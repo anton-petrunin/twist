@@ -55,7 +55,7 @@ This note is inspired by examples of embeddings $\TT^n\hookrightarrow\BB^q$ for 
 In other words, any geodesic in the torus has constant curvature $K_n$ as a curve in $\RR^q$.
 These examples were found by Michael Gromov among geodesic subtori in Clifford's tori 
 \cite[2.A]{gromov3}, \cite[1.1.A.]{gromov2}.
-In particular, Gromov's tori have flat induced metric.
+In particular, Gromov's tori have flat induced metrics.
 (Recall that Clifford's torus is a product of $m$  circles of radius ${1}/{\sqrt{m}}$ in $\RR^{2\cdot m}$;
 its normal curvatures lie in the range $[\,1,\sqrt{m}\,]$.)
 
@@ -78,10 +78,10 @@ Then its maximal normal curvature is at least
 To make the statement more exact, we need one more notation.
 Assume that $L$ is
 a smooth $n$-dimensional manifold immersed in $\RR^q$;
-we will always assume that $L$ is equipped with induced Riemannian metric.
+we will always assume that $L$ is equipped with the induced Riemannian metric.
 Let us denote by $\T_x$ and $\N_x$ the tangent and normal spaces of $L$ at~$x$.
 
-Recall that \emph{second fundamental form} $\II$ at $x$ is a symmetric quadratic form on $\T_x$ with values in $\N_x$.
+Recall that the \emph{second fundamental form} $\II$ at $x$ is a symmetric quadratic form on $\T_x$ with values in $\N_x$.
 It is uniquely defined by the identity $\II(\vec v,\vec v)\equiv \gamma''_{\vec v}(0)$,
 where $\vec v\in \T_x$ and $\gamma_{\vec v}$ is an $L$-geodesic that starts at $x$ with initial velocity vector~$\vec v$.
 
@@ -126,7 +126,7 @@ All this follows since the normal curvature in some direction at $x$ is at least
 
 All proofs  use our version of the Gauss formula; see below.
 The proofs of \ref{SHORT.strong:sphere}--\ref{SHORT.strong:main} use in addition that 
-\textit{torus does not admit a metric with positive scalar curvature} \cite[Corollary A]{gromov-lawson}.
+\textit{the torus does not admit a metric with positive scalar curvature} \cite[Corollary A]{gromov-lawson}.
 
 \begin{thm}{Open question}
 Is it true that for any smooth immersion $\TT^n\looparrowright\BB^q$ the inequality $\zh\ge3\cdot \tfrac{n}{n+2}$ holds at some point? 
@@ -147,7 +147,7 @@ You may also ask for the optimal constant for your favorite closed manifold.
 Recall that $L$ is a smooth $n$-dimensional manifold immersed in $\RR^q$.
 Given $p\in L$,
 denote by $\Sc(p)$ and $H(p)$
-the scalar curvature, the mean curvature vector at $p$.
+the scalar curvature and the mean curvature vector at $p$.
 
 The following version of the Gauss formula plays a central role in all proofs;
 it is used instead of the formula in \cite[5.B]{gromov1}.
@@ -212,7 +212,7 @@ The following statement appears in the book of Yuri Burago and Viktor Zalgaller 
 it generalizes the result of István Fáry about average curvature of a curve in the unit ball \cite{fary,tabachnikov}, but the proof is essentially the same.
 
 \begin{thm}{Lemma}\label{lem:av(H)}
-Let $L$ be a closed $n$-dimension manifold that is smoothly immersed in $\BB^q$.
+Let $L$ be a closed $n$-dimensional manifold that is smoothly immersed in $\BB^q$.
 Then the average value of $|H|$ on $L$ is at least $n$.
 \end{thm}
 
@@ -226,7 +226,7 @@ Since $|x|\le1$, we get the result.
 
 \parit{Proof of \ref{strong:2D}.}
 By \ref{lem:av(H)}, the average value of $|H|^2$ is at least 4.
-Further, by the Gauss--Bonnet formula, scalar curvature (which is twice the Gauss curvature in this case) has zero average.
+Further, by the Gauss--Bonnet formula, the scalar curvature (which is twice the Gauss curvature in this case) has zero average.
 Therefore \ref{formula:gauss} implies the statement.
 \qeds
 
@@ -245,7 +245,7 @@ It remains to apply \ref{formula:gauss} at $x$.
 \section{Main case}
 
 The following lemma is an easy corollary of the bow lemma of Axel Schur \cite{shur,petrunin-zamora}.
-It tells how we use the bound on normal curvatures in \ref{strong:main}.
+It explains how we use the assumption on normal curvatures in \ref{strong:main}.
 If $n\le4$, then the proof works without this assumption.
 
 \begin{thm}{Lemma}\label{lem:trivial}
