@@ -29,7 +29,7 @@ pdfauthor={\theauthors}
 
 
 
-
+%\usepackage[a-2b,mathxmp]{pdfx}[2018/12/22]
 
 %\overfullrule=100mm
 
@@ -82,7 +82,7 @@ we will always assume that $L$ is equipped with the induced Riemannian metric.
 Let us denote by $\T_x$ and $\N_x$ the tangent and normal spaces of $L$ at~$x$.
 
 Recall that the \emph{second fundamental form} $\II$ at $x$ is a symmetric quadratic form on $\T_x$ with values in $\N_x$.
-It is uniquely defined by the identity $\II(\vec v,\vec v)\equiv \gamma''_{\vec v}(0)$,
+It is uniquely defined by the identity $\II(\vec v,\vec v)\z\equiv \gamma''_{\vec v}(0)$,
 where $\vec v\in \T_x$ and $\gamma_{\vec v}$ is an $L$-geodesic that starts at $x$ with initial velocity vector~$\vec v$.
 
 Given $x\in L$,
@@ -138,9 +138,18 @@ Is it true that its normal curvature is at least $\sqrt{2\cdot n/(n+1)}$ in  som
 \end{thm}
 
 The last question asks if \textit{the Veronese embedding is optimal}.
-Recall that the Veronese embedding $\RP^n\hookrightarrow\BB^q$ has all normal curvatures $\sqrt{2\cdot n/(n+1)}$; here $q= \tfrac12\cdot(n+1)(n+2)$.
+Recall that the Veronese embedding $\RP^n\hookrightarrow\BB^q$ has all normal curvatures $\sqrt{2\cdot n/(n+1)}$; here $q= \tfrac12\cdot(n+1)\cdot(n+2)$.
 An analogous question for immersions into unit spheres is open as well \cite{445819}.
 You may also ask for the optimal constant for your favorite closed manifold.
+
+Gromov's construction gives many smooth immersions $\TT^n\looparrowright\BB^q$ with normal curvatures $\sqrt{3\cdot n/(n+2)}$ in all directions.
+The proof of our theorem implies that such immersions send torus to the boundary of $\BB^q$ and it tell exactly what is its second fundamenal form.
+Nevertheless the following question is open.
+
+\begin{thm}{Open question}
+Can one describe all smooth immersions $\TT^n\looparrowright\BB^q$ with normal curvatures $\sqrt{3\cdot n/(n+2)}$ in all directions?
+\end{thm}
+
 
 \section{Gauss formula}
 
@@ -239,7 +248,7 @@ Since $\Sc\equiv0$, it remains to apply \ref{formula:gauss}.
 \parit{Proof of \ref{strong:sphere}.} 
 Since the image lies in the unit sphere, we have that $|H|^2$ is at least $n^2$ at each point.
 Since $\TT^n$ does not admit a metric with positive scalar curvature \cite[Corollary A]{gromov-lawson}, we have $\Sc(x)\le 0$ at some point $x$.
-It remains to apply \ref{formula:gauss} at $x$.
+It remains to apply \ref{formula:gauss} at~$x$.
 \qeds
 
 \section{Main case}
@@ -249,7 +258,7 @@ It explains how we use the assumption on normal curvatures in \ref{strong:main}.
 If $n\le4$, then the proof works without this assumption.
 
 \begin{thm}{Lemma}\label{lem:trivial}
-Let $L$ be a manifold smoothly immersed in $\BB^q$.
+Let $L$ be a complete smooth manifold smoothly immersed in $\BB^q$.
 Suppose its normal curvatures are at most $2$.
 Given $x\in L$, denote by $\beta=\beta(x)$ the angle between vector $x$ and the normal space $\N_x$.
 Then $|x|\le \cos\beta$.
@@ -278,7 +287,7 @@ It follows that $L$ does not lie in $\BB^q$ --- a contradiction.
 Let $g$ be a Riemannian metric on $\TT^n$.
 Suppose $n\ge 3$, and $u\:\TT^n\to \RR$ is a smooth positive function.
 Recall that
-\[\left(\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\right)\cdot u^{\frac{n-2}{n+2}}\]
+\[\left(\Sc\cdot u-4{\cdot}\tfrac{n-1}{n-2}{\cdot}\Delta u\right)\cdot u^{-\frac{n+2}{n-2}}\]
 is the scalar curvature of the metric $u^{\frac{4}{n-2}}\cdot g$;
 see for example \cite[6.3]{aubin}.
 Since \emph{any Riemannian metric on $\TT^n$ has nonpositive scalar curvature at some point} \cite[Corollary A]{gromov-lawson}, we get the following.
@@ -293,7 +302,7 @@ returns a nonpositive value at some point.
 \parit{Proof of \ref{strong:4D} and \ref{strong:main}.}
 The case $n=2$ follows from \ref{strong:2D};
 so we can assume that $n\ge 3$.
-Consider the function $u\:x\mapsto \exp(-\tfrac k2\cdot|x|^2)$ on the torus.
+Consider the function $u\:x\mapsto \exp(-\tfrac k2\cdot|x|^2)$ for $x\in \TT^n$.
 
 We will apply the following formula
 \[\Delta(\phi\circ f)=(\phi'\circ f)\cdot \Delta f+(\phi''\circ f)\cdot|\nabla f|^2\]

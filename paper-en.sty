@@ -85,6 +85,7 @@ isbn=false]{biblatex}
 \def\Ric{\operatorname{\rm Ric}}
 \def\pack{\operatorname{\rm pack}}
 \def\rank{\operatorname{\rm rank}\nolimits}
+\def\trace{\operatorname{\rm trace}}
 \def\Rm{\operatorname{\rm Rm}}
 \def\Sc{\mathrm{Sc}}
 \def\Int{\operatorname{\rm Int}}
@@ -96,7 +97,15 @@ isbn=false]{biblatex}
 \def\EE{\mathbb{E}}
 \def\R{\mathbb{R}}
 \def\RP{\mathbb{R}\mathrm{P}}
+\def\CP{\mathbb{C}\mathrm{P}}
+\def\HP{\mathbb{H}\mathrm{P}}
+\def\OP{\mathbb{O}\mathrm{P}}
+\def\KP{\mathbb{K}\mathrm{P}}
 \def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\HH{\mathbb{H}}
+\def\OO{\mathbb{O}}
+\def\KK{\mathbb{K}}
 \def\SSS{\mathbb{S}}
 \def\BB{\mathbb{B}}
 \def\HH{\mathbb{H}}
@@ -125,7 +134,8 @@ isbn=false]{biblatex}
 \def\i{\subset}
 \def\vr{\overrightarrow}
 \def\length{\mathop{\rm length}\nolimits}
-\newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r|\,{#2}\,\r\}}
+\newcommand*{\set}[2]%{\left\{\,{#1}\,:\,{#2}\,\right\}}
+{\ifthenelse{\equal{#2}{}}{\left\{\,{#1}\,\right\}}{\left\{\,{#1}\,:\,{#2}\,\right\}}}
 \def\:{\colon}
 \def\acts{\curvearrowright}
 \def\id{\mathrm{id}}
